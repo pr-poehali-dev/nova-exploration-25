@@ -1,28 +1,28 @@
 import type React from "react"
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { ArrowRight } from "lucide-react"
+import Icon from "@/components/ui/icon"
 
 const articles = [
   {
-    title: "Искусство визуального сторителлинга",
-    category: "Дизайн",
+    title: "Авангард как язык одиночества",
+    category: "Манифест",
     image: "/visual-storytelling-design-article.jpg",
   },
   {
-    title: "Как создать личный бренд онлайн",
-    category: "Стратегия",
+    title: "10 лет без лица — 10 лет в истории",
+    category: "Хроника",
     image: "/personal-branding-digital-marketing.jpg",
   },
   {
-    title: "Тренды типографики 2025",
-    category: "Типографика",
+    title: "Выставка «Кисть» — что нас ждёт",
+    category: "Событие",
     image: "/typography-trends-modern-fonts.jpg",
   },
   {
-    title: "Минимализм в дизайне портфолио",
-    category: "Вдохновение",
-    image: "/placeholder.svg?height=200&width=300",
+    title: "Форма без автора: о природе анонимного искусства",
+    category: "Эссе",
+    image: "/modern-ui-design-portfolio-mockup.jpg",
   },
 ]
 
@@ -38,12 +38,12 @@ export function InsightsSection() {
     <section className="bg-background px-6 py-24" onMouseMove={handleMouseMove}>
       <div className="max-w-4xl mx-auto">
         <motion.p
-          className="text-muted-foreground text-sm uppercase tracking-widest mb-8"
+          className="text-muted-foreground text-xs uppercase tracking-[0.3em] mb-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          Статьи
+          Вокруг Мастера
         </motion.p>
 
         <div className="divide-y divide-border">
@@ -63,20 +63,19 @@ export function InsightsSection() {
             >
               <div className="flex-1">
                 <span className="text-xs text-muted-foreground uppercase tracking-wider">{article.category}</span>
-                <h3 className="font-serif text-xl md:text-2xl text-foreground mt-1 group-hover:text-primary transition-colors">
+                <h3 className="font-serif text-xl md:text-2xl text-foreground mt-1 group-hover:text-foreground/60 transition-colors">
                   {article.title}
                 </h3>
               </div>
-              <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
+              <Icon name="ArrowRight" size={18} className="text-muted-foreground group-hover:text-foreground group-hover:translate-x-1 transition-all" />
             </motion.a>
           ))}
         </div>
 
-        {/* Floating hover image */}
         <AnimatePresence>
           {hoveredIndex !== null && (
             <motion.div
-              className="fixed pointer-events-none z-50 w-[200px] md:w-[300px] rounded-lg overflow-hidden shadow-2xl hidden md:block"
+              className="fixed pointer-events-none z-50 w-[200px] md:w-[300px] overflow-hidden shadow-2xl hidden md:block"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{
                 opacity: 1,
@@ -90,7 +89,7 @@ export function InsightsSection() {
               <img
                 src={articles[hoveredIndex].image || "/placeholder.svg"}
                 alt={articles[hoveredIndex].title}
-                className="w-full h-auto"
+                className="w-full h-auto grayscale"
               />
             </motion.div>
           )}

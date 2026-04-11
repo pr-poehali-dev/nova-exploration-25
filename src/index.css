@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,73 +6,43 @@
 
 @layer base {
   :root {
-    /* Folio Lilac & Ink Theme */
-    --background: 270 20% 99%;
-    --foreground: 270 63% 6%;
-    --surface: 270 20% 96%;
-    --ink: 270 63% 6%;
-    --iris: 263 70% 42%;
-    --lilac: 270 89% 85%;
-    --lime: 82 85% 80%;
-    --muted-foreground: 270 8% 43%;
+    /* Мастер — Полностью чёрная тема */
+    --background: 0 0% 4%;
+    --foreground: 0 0% 92%;
+    --surface: 0 0% 8%;
+    --ink: 0 0% 92%;
+    --iris: 0 0% 70%;
+    --lilac: 0 0% 20%;
+    --lime: 0 0% 85%;
+    --muted-foreground: 0 0% 45%;
 
-    --card: 270 20% 96%;
-    --card-foreground: 270 63% 6%;
-    --popover: 270 20% 99%;
-    --popover-foreground: 270 63% 6%;
-    --primary: 263 70% 42%;
-    --primary-foreground: 270 20% 99%;
-    --secondary: 270 20% 96%;
-    --secondary-foreground: 270 63% 6%;
-    --muted: 270 20% 96%;
-    --accent: 270 89% 85%;
-    --accent-foreground: 270 63% 6%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 92%;
+    --popover: 0 0% 4%;
+    --popover-foreground: 0 0% 92%;
+    --primary: 0 0% 92%;
+    --primary-foreground: 0 0% 4%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 92%;
+    --muted: 0 0% 10%;
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 92%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-    --border: 270 15% 92%;
-    --input: 270 15% 92%;
-    --ring: 263 70% 42%;
+    --border: 0 0% 14%;
+    --input: 0 0% 14%;
+    --ring: 0 0% 50%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 270 10% 8%;
-    --foreground: 270 10% 98%;
-    --card: 270 10% 8%;
-    --card-foreground: 270 10% 98%;
-    --popover: 270 10% 8%;
-    --popover-foreground: 270 10% 98%;
-    --primary: 270 10% 98%;
-    --primary-foreground: 270 10% 12%;
-    --secondary: 270 10% 16%;
-    --secondary-foreground: 270 10% 98%;
-    --muted: 270 10% 16%;
-    --muted-foreground: 270 5% 60%;
-    --accent: 270 10% 16%;
-    --accent-foreground: 270 10% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 270 10% 16%;
-    --input: 270 10% 16%;
-    --ring: 270 5% 50%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 0 0% 4%;
+    --sidebar-foreground: 0 0% 92%;
+    --sidebar-primary: 0 0% 92%;
+    --sidebar-primary-foreground: 0 0% 4%;
+    --sidebar-accent: 0 0% 10%;
+    --sidebar-accent-foreground: 0 0% 92%;
+    --sidebar-border: 0 0% 14%;
+    --sidebar-ring: 0 0% 50%;
   }
 }
 
@@ -83,7 +53,9 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.01em;
   }
 }
 
@@ -94,7 +66,8 @@
 
 /* Serrated ticket edge */
 .ticket-edge {
-  mask-image: radial-gradient(circle at 0 50%, transparent 8px, black 8px),
+  mask-image:
+    radial-gradient(circle at 0 50%, transparent 8px, black 8px),
     radial-gradient(circle at 100% 50%, transparent 8px, black 8px);
   mask-size: 51% 100%;
   mask-position: left, right;

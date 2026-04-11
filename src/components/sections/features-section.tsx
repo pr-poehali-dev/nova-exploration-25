@@ -1,77 +1,81 @@
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 
-function TypeTester() {
-  const [scale, setScale] = useState(1)
+function YearsCounter() {
+  const [count, setCount] = useState(0)
 
   useEffect(() => {
+    let frame = 0
+    const target = 10
     const interval = setInterval(() => {
-      setScale((prev) => (prev === 1 ? 1.5 : 1))
-    }, 2000)
+      frame++
+      setCount(Math.min(frame, target))
+      if (frame >= target) clearInterval(interval)
+    }, 120)
     return () => clearInterval(interval)
   }, [])
 
   return (
     <div className="flex items-center justify-center h-full">
-      <motion.span
-        className="font-serif text-6xl md:text-8xl text-foreground"
-        animate={{ scale }}
-        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-      >
-        Aa
-      </motion.span>
+      <div className="text-center">
+        <motion.span
+          className="font-serif text-7xl md:text-9xl text-foreground"
+          animate={{ opacity: [0.4, 1, 0.4] }}
+          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+        >
+          {count}
+        </motion.span>
+        <p className="text-muted-foreground text-xs tracking-widest uppercase mt-2">лет в тени</p>
+      </div>
     </div>
   )
 }
 
-function LayoutAnimation() {
-  const [layout, setLayout] = useState(0)
+function SilhouetteAnimation() {
+  const [visible, setVisible] = useState(true)
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setLayout((prev) => (prev + 1) % 3)
-    }, 2500)
+      setVisible((prev) => !prev)
+    }, 2000)
     return () => clearInterval(interval)
   }, [])
 
-  const layouts = ["grid-cols-2 grid-rows-2", "grid-cols-3 grid-rows-1", "grid-cols-1 grid-rows-3"]
-
   return (
     <div className="h-full p-4 flex items-center justify-center">
-      <motion.div className={`grid ${layouts[layout]} gap-2 w-full max-w-[140px]`} layout>
-        {[1, 2, 3].map((i) => (
-          <motion.div
-            key={i}
-            className="bg-primary/20 rounded-md min-h-[30px]"
-            layout
-            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          />
-        ))}
+      <motion.div
+        className="w-20 h-28 rounded-full border border-foreground/20 relative overflow-hidden"
+        animate={{ borderColor: visible ? "rgba(255,255,255,0.4)" : "rgba(255,255,255,0.05)" }}
+        transition={{ duration: 1 }}
+      >
+        <motion.div
+          className="absolute inset-0 bg-foreground/5"
+          animate={{ opacity: visible ? 0.05 : 0.3 }}
+          transition={{ duration: 1.5 }}
+        />
+        <motion.div
+          className="absolute bottom-0 left-0 right-0 h-1/2 bg-foreground/10"
+          animate={{ height: visible ? "50%" : "80%" }}
+          transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
+        />
       </motion.div>
     </div>
   )
 }
 
-function SpeedIndicator() {
-  const [progress, setProgress] = useState(0)
-
-  useEffect(() => {
-    const timeout = setTimeout(() => setProgress(100), 500)
-    return () => clearTimeout(timeout)
-  }, [])
-
+function StrokePulse() {
   return (
-    <div className="flex flex-col items-center justify-center h-full gap-4">
-      <span className="text-3xl md:text-4xl font-sans font-medium text-foreground">100ms</span>
-      <span className="text-sm text-muted-foreground">Загрузка</span>
-      <div className="w-full max-w-[120px] h-1.5 bg-foreground/10 rounded-full overflow-hidden">
+    <div className="flex flex-col items-center justify-center h-full gap-3">
+      {[100, 60, 85, 40, 70].map((w, i) => (
         <motion.div
-          className="h-full bg-primary rounded-full"
+          key={i}
+          className="h-px bg-foreground/40 rounded-full"
           initial={{ width: 0 }}
-          animate={{ width: `${progress}%` }}
-          transition={{ duration: 0.1 }}
+          animate={{ width: `${w}%` }}
+          transition={{ duration: 1.2, delay: i * 0.15, ease: [0.16, 1, 0.3, 1] }}
+          style={{ maxWidth: "140px" }}
         />
-      </div>
+      ))}
     </div>
   )
 }
@@ -81,18 +85,17 @@ export function FeaturesSection() {
     <section className="bg-background px-6 py-24">
       <div className="max-w-6xl mx-auto">
         <motion.p
-          className="text-muted-foreground text-sm uppercase tracking-widest mb-8"
+          className="text-muted-foreground text-xs uppercase tracking-[0.3em] mb-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          Возможности
+          О художнике
         </motion.p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Typography Card */}
           <motion.div
-            className="bg-secondary rounded-xl p-8 min-h-[280px] flex flex-col"
+            className="bg-secondary rounded-none p-8 min-h-[280px] flex flex-col border border-border"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -102,17 +105,16 @@ export function FeaturesSection() {
             data-clickable
           >
             <div className="flex-1">
-              <TypeTester />
+              <YearsCounter />
             </div>
             <div className="mt-4">
-              <h3 className="font-serif text-xl text-foreground">Типографика</h3>
-              <p className="text-muted-foreground text-sm mt-1">Красивые шрифты, которые идеально масштабируются.</p>
+              <h3 className="font-serif text-xl text-foreground">Десятилетие</h3>
+              <p className="text-muted-foreground text-sm mt-1">Мастер создаёт уже 10 лет — и ни одного публичного появления.</p>
             </div>
           </motion.div>
 
-          {/* Layouts Card */}
           <motion.div
-            className="bg-secondary rounded-xl p-8 min-h-[280px] flex flex-col"
+            className="bg-secondary rounded-none p-8 min-h-[280px] flex flex-col border border-border"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -122,17 +124,16 @@ export function FeaturesSection() {
             data-clickable
           >
             <div className="flex-1">
-              <LayoutAnimation />
+              <SilhouetteAnimation />
             </div>
             <div className="mt-4">
-              <h3 className="font-serif text-xl text-foreground">Макеты</h3>
-              <p className="text-muted-foreground text-sm mt-1">Гибкие сетки, которые адаптируются под контент.</p>
+              <h3 className="font-serif text-xl text-foreground">Тайна</h3>
+              <p className="text-muted-foreground text-sm mt-1">Никто не видел его лица. Только работы говорят за него.</p>
             </div>
           </motion.div>
 
-          {/* Speed Card */}
           <motion.div
-            className="bg-secondary rounded-xl p-8 min-h-[280px] flex flex-col"
+            className="bg-secondary rounded-none p-8 min-h-[280px] flex flex-col border border-border"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -142,11 +143,11 @@ export function FeaturesSection() {
             data-clickable
           >
             <div className="flex-1">
-              <SpeedIndicator />
+              <StrokePulse />
             </div>
             <div className="mt-4">
-              <h3 className="font-serif text-xl text-foreground">Скорость</h3>
-              <p className="text-muted-foreground text-sm mt-1">Молниеносная загрузка страниц для ваших гостей.</p>
+              <h3 className="font-serif text-xl text-foreground">Авангард</h3>
+              <p className="text-muted-foreground text-sm mt-1">Нестандартный стиль, узнаваемый с первого взгляда.</p>
             </div>
           </motion.div>
         </div>

@@ -2,9 +2,9 @@ import { useRef } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 
 const showcaseImages = [
+  "/minimal-architecture-portfolio-with-clean-lines.jpg",
+  "/fashion-photography-editorial-black-and-white.jpg",
   "/modern-architecture-building-exterior-minimal.jpg",
-  "/fashion-model-editorial-portrait-dramatic-lighting.jpg",
-  "/interior-design-minimalist-living-room-natural-lig.jpg",
 ]
 
 export function ShowcaseSection() {
@@ -24,19 +24,19 @@ export function ShowcaseSection() {
     <section ref={containerRef} className="bg-background px-6 py-32 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <motion.p
-          className="text-muted-foreground text-sm uppercase tracking-widest mb-8"
+          className="text-muted-foreground text-xs uppercase tracking-[0.3em] mb-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          Галерея
+          Избранное
         </motion.p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {showcaseImages.map((src, i) => (
             <motion.div
               key={i}
-              className="relative h-[400px] md:h-[500px] rounded-xl overflow-hidden group"
+              className="relative h-[400px] md:h-[500px] overflow-hidden group"
               style={{ y: yValues[i] }}
               initial={{ clipPath: "inset(100% 0 0 0)" }}
               whileInView={{ clipPath: "inset(0 0 0 0)" }}
@@ -50,10 +50,10 @@ export function ShowcaseSection() {
             >
               <motion.img
                 src={src}
-                alt={`Изображение ${i + 1}`}
-                className="w-full h-full object-cover"
-                whileHover={{ scale: 1.1 }}
-                transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                alt={`Работа Мастера ${i + 1}`}
+                className="w-full h-full object-cover grayscale"
+                whileHover={{ scale: 1.05, filter: "grayscale(0)" }}
+                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               />
             </motion.div>
           ))}
