@@ -1,12 +1,12 @@
 import { motion } from "framer-motion"
 
 const portfolioItems = [
-  "/portfolio-website-design-preview-modern.jpg",
-  "/fashion-photography-editorial-black-and-white.jpg",
-  "/architecture-firm-website-minimal.jpg",
-  "/design-agency-portfolio-dark-theme.jpg",
-  "/artist-portfolio-website-creative.jpg",
-  "/fashion-model-editorial-portrait-dramatic-lighting.jpg",
+  "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/files/caf47965-fe7c-4156-8b29-cd44b8ec5ab3.jpg",
+  "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/files/13a29dac-c5fe-41ee-9f74-c4755118c7b0.jpg",
+  "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/files/0141a8ff-c516-45ed-a113-95e28e9a48bf.jpg",
+  "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/files/f8b77b52-ec8d-49ea-b53a-b4132c340aae.jpg",
+  "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/files/0ce34bf2-d302-4075-9904-10adb10b38c9.jpg",
+  "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/files/ea921cd7-17eb-49cc-b27b-ac7c31a45785.jpg",
 ]
 
 export function CarouselSection() {
@@ -44,7 +44,7 @@ export function CarouselSection() {
               <img
                 src={src || "/placeholder.svg"}
                 alt={`Работа ${(i % portfolioItems.length) + 1}`}
-                className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
+                className="w-full h-auto"
               />
             </div>
           ))}
