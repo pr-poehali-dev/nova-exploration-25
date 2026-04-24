@@ -99,7 +99,7 @@ export function WsStories() {
                     <p style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "0.75rem", color: darkText }}>{s.price}</p>
                   </div>
                 ))}
-                <p className="text-[8px] tracking-widest uppercase font-semibold" style={{ color: cherry }}>Консультация — бесплатно</p>
+                <p className="text-[8px] tracking-widest uppercase font-semibold text-center" style={{ color: cherry }}>Консультация — бесплатно</p>
               </div>
             </div>
           </div>

@@ -107,7 +107,7 @@ function QuoteCarousel() {
 }
 
 const moodImages = [
-  { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/012eedee-91ff-4b8b-9133-8b15355a30a1.jpg", caption: "Фата на ветру" },
+  { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/012eedee-91ff-4b8b-9133-8b15355a30a1.jpg", caption: "Фата на ветру", scale: 1.18 },
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/735a4fdc-a0f6-4113-a44e-54f23a34b17b.jpg", caption: "Смеяться вместе" },
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/d48172b9-5ad3-45e0-affe-193769bee577.jpg", caption: "Утро невесты" },
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/c491c222-2134-40ff-8bf2-fd00189cda73.jpg", caption: "Атмосфера утра" },
@@ -122,7 +122,7 @@ const moodImages = [
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/ece42f75-9d2a-48ad-940f-43eb58b8909a.jpg", caption: "Первый поцелуй" },
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/429a3e00-d2ee-48e3-aba9-1445eea45126.jpg", caption: "Друзья жениха" },
 
-  { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/bd867ec4-da1e-41ff-9c83-b0aae952ab3b.jpg", caption: "Стиль жениха" },
+  { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/bd867ec4-da1e-41ff-9c83-b0aae952ab3b.jpg", caption: "Стиль жениха", scale: 1.2, objectPos: "center 15%" },
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/be3228ed-3a6a-4540-9ee5-8d43c4f8aa3d.jpg", caption: "Шнуровка платья" },
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/202a28ff-983a-4682-9eb7-6f71d13c04c1.jpg", caption: "Тени влюблённых" },
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/4734a532-ba90-410e-aef6-a00faa3837fd.jpg", caption: "В этом году замуж" },
@@ -171,8 +171,13 @@ export function WsVision() {
                   style={{
                     height: "340px",
                     filter: "contrast(97%) brightness(98%)",
-                    transform: (img as { rotate?: boolean }).rotate ? "rotate(90deg) scale(1.4)" : undefined,
+                    transform: (img as { rotate?: boolean; scale?: number }).rotate
+                      ? "rotate(90deg) scale(1.4)"
+                      : (img as { scale?: number }).scale
+                      ? `scale(${(img as { scale?: number }).scale})`
+                      : undefined,
                     transformOrigin: "center center",
+                    objectPosition: (img as { objectPos?: string }).objectPos ?? "center",
                   }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
