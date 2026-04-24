@@ -121,7 +121,7 @@ const moodImages = [
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/dfe17705-4801-466e-81b4-7102d074fb6a.jpg", caption: "Самый весёлый гость" },
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/ece42f75-9d2a-48ad-940f-43eb58b8909a.jpg", caption: "Первый поцелуй" },
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/429a3e00-d2ee-48e3-aba9-1445eea45126.jpg", caption: "Друзья жениха" },
-  { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/f628b7e9-56ed-42be-861f-3be53d029056.jpg", caption: "Под диско-шаром" },
+
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/bd867ec4-da1e-41ff-9c83-b0aae952ab3b.jpg", caption: "Стиль жениха" },
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/be3228ed-3a6a-4540-9ee5-8d43c4f8aa3d.jpg", caption: "Шнуровка платья" },
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/202a28ff-983a-4682-9eb7-6f71d13c04c1.jpg", caption: "Тени влюблённых" },
@@ -153,7 +153,7 @@ export function WsVision() {
           <div
             className="flex gap-4"
             style={{
-              animation: "visionMarquee 35s linear infinite",
+              animation: "visionMarquee 65s linear infinite",
               width: "max-content",
             }}
           >
