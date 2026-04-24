@@ -1,5 +1,7 @@
 import { useState } from "react"
 
+const FORM_URL = "https://functions.poehali.dev/c3ef5ebb-0e12-4bb4-966d-3bd1ef8ad5bb"
+
 const contactOptions = [
   "Телефонный звонок",
   "WhatsApp / Telegram",
@@ -33,8 +35,17 @@ export function WsForm() {
     }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    try {
+      await fetch(FORM_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      })
+    } catch (_) {
+      // отправляем best-effort
+    }
     setSubmitted(true)
   }
 

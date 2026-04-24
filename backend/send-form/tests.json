@@ -1,0 +1,31 @@
+{
+  "tests": [
+    {
+      "name": "OPTIONS preflight",
+      "method": "OPTIONS",
+      "path": "/",
+      "expectedStatus": 200
+    },
+    {
+      "name": "Send form",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "brideName": "Тест",
+        "groomName": "Тест",
+        "phone": "+79000000000",
+        "email": "test@test.com",
+        "contactMethod": "Telegram",
+        "weddingDate": "2025-06-15",
+        "city": "Казань",
+        "expectations": "Тестовое сообщение",
+        "hasStyle": "Нет",
+        "styleDescription": "",
+        "comments": ""
+      },
+      "expectedStatus": 200,
+      "expectedBody": {"ok": true},
+      "bodyMatcher": "partial"
+    }
+  ]
+}
