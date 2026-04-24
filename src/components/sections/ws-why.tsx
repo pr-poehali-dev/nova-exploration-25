@@ -109,7 +109,8 @@ export function WsWhy() {
             ]).flat().map((item, i) => (
               <span
                 key={i}
-                className="text-muted-foreground/50 text-xs tracking-[0.25em] uppercase"
+                className="text-xs tracking-[0.25em] uppercase"
+                style={{ color: "hsl(345, 45%, 28%)" }}
               >
                 {item}
               </span>

@@ -32,7 +32,7 @@ export function WsHero() {
         >
           wabi sabi studio
         </div>
-        <nav className="hidden md:flex gap-8 text-xs tracking-widest uppercase font-semibold" style={{ color: "hsl(345, 65%, 72%)" }}>
+        <nav className="hidden md:flex gap-8 text-xs tracking-widest uppercase font-semibold" style={{ color: "hsl(345, 45%, 28%)" }}>
           <a href="#about" className="transition-colors hover:opacity-80">Обо мне</a>
           <a href="#services" className="transition-colors hover:opacity-80">Услуги</a>
           <a href="#pricing" className="transition-colors hover:opacity-80">Цены</a>
@@ -45,7 +45,7 @@ export function WsHero() {
         <div
           className={`transition-all duration-1000 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
         >
-          <p className="text-xs tracking-[0.3em] uppercase mb-6 font-bold" style={{ color: "hsl(345, 65%, 72%)" }}>
+          <p className="text-xs tracking-[0.3em] uppercase mb-6 font-bold" style={{ color: "hsl(345, 45%, 28%)" }}>
             Набережные Челны · Казань
           </p>
           <h1
