@@ -28,7 +28,7 @@ const servicePhotos = [
   },
   {
     src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/7f145795-54fe-4e93-b889-7bf1211b7b4b.jpg",
-    caption: "«Каждая деталь создаёт атмосферу.»",
+    caption: "«Декор создаёт настроение.»",
   },
   {
     src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/22092d33-77ca-4324-9e5d-15726f5680c6.jpg",
@@ -40,11 +40,11 @@ const servicePhotos = [
   },
   {
     src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/95dd9d65-6e57-41ec-8def-b71e8e5da182.jpg",
-    caption: "«Детали создают настроение.»",
+    caption: "«Свечи, цветы и атмосфера.»",
   },
   {
     src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/3d756eda-ec81-4033-9501-4fb2c653fc33.jpg",
-    caption: "«Ваша единственная забота — сказать Да.»",
+    caption: "«Пусть всё пройдёт идеально.»",
   },
 ]
 
