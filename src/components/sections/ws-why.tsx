@@ -46,10 +46,18 @@ export function WsWhy() {
               Подход,<br />
               <em style={{ color: "hsl(345, 45%, 28%)" }}>который меняет всё</em>
             </h2>
-            <p className="text-foreground/70 font-light leading-relaxed">
+            <p className="text-foreground/70 font-light leading-relaxed mb-8">
               Я не просто организовываю мероприятия. Я беру на себя <span style={{ color: "hsl(345, 45%, 28%)" }}>тревогу</span>, которая сопровождает
               каждую пару в процессе подготовки — и превращаю её в <span style={{ color: "hsl(345, 45%, 28%)" }}>лёгкость</span>.
             </p>
+            <div className="relative">
+              <img
+                src="https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/819c3bd0-c99c-461d-8641-e8f18cd37051.jpg"
+                alt="Атмосфера свадьбы"
+                className="w-full object-cover"
+                style={{ aspectRatio: "4/3", filter: "contrast(96%) brightness(99%)" }}
+              />
+            </div>
           </div>
 
           <div className="space-y-8">

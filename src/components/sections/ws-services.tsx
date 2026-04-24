@@ -1,5 +1,86 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import Icon from "@/components/ui/icon"
+
+const servicePhotos = [
+  {
+    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/fd2db6e6-0e2b-4720-a733-ba2b9fba3a31.jpg",
+    caption: "«Ваша единственная забота — сказать \u00abДа\u00bb.»",
+  },
+  {
+    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/6d4c2b92-0b2e-42d9-8d72-f3d8952cd4d7.jpg",
+    caption: "«Каждая деталь — на своём месте.»",
+  },
+  {
+    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/e6fd86bc-132b-40a3-b4b9-1e20e517735f.jpg",
+    caption: "«Просто наслаждайтесь моментом.»",
+  },
+  {
+    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/a63f12fc-cce7-4180-96a4-cc4fcca61885.jpg",
+    caption: "«Рядом — всегда.»",
+  },
+  {
+    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/d2f58b00-be89-4c67-aaac-70c8c6f44163.jpg",
+    caption: "«Ваш день — ваша история.»",
+  },
+]
+
+function ServicePhotoSlider() {
+  const [index, setIndex] = useState(0)
+  const [fade, setFade] = useState(true)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setFade(false)
+      setTimeout(() => {
+        setIndex((i) => (i + 1) % servicePhotos.length)
+        setFade(true)
+      }, 400)
+    }, 4000)
+    return () => clearInterval(timer)
+  }, [])
+
+  const photo = servicePhotos[index]
+
+  return (
+    <div className="relative">
+      <div style={{ transition: "opacity 0.4s ease", opacity: fade ? 1 : 0 }}>
+        <img
+          src={photo.src}
+          alt={photo.caption}
+          className="w-full object-cover"
+          style={{ aspectRatio: "3/4", filter: "contrast(96%) brightness(98%)" }}
+        />
+        <div className="absolute bottom-6 left-6 right-6 bg-background/90 p-5 border border-border">
+          <p
+            className="text-foreground/80 leading-relaxed"
+            style={{
+              fontFamily: "Cormorant Garamond, serif",
+              fontSize: "1.05rem",
+              fontStyle: "italic",
+              fontWeight: 300,
+            }}
+          >
+            {photo.caption}
+          </p>
+        </div>
+      </div>
+      {/* Dots */}
+      <div className="absolute top-4 right-4 flex flex-col gap-1.5 z-10">
+        {servicePhotos.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => { setFade(false); setTimeout(() => { setIndex(i); setFade(true) }, 300) }}
+            className="w-1.5 h-1.5 rounded-full transition-all"
+            style={{
+              background: i === index ? "hsl(345, 45%, 28%)" : "rgba(255,255,255,0.5)",
+              transform: i === index ? "scale(1.4)" : "scale(1)",
+            }}
+          />
+        ))}
+      </div>
+    </div>
+  )
+}
 
 const organizer = [
   { icon: "MessageCircle", text: "Консультации по всем аспектам торжества" },
@@ -167,28 +248,8 @@ export function WsServices() {
             )}
           </div>
 
-          {/* Visual side */}
-          <div className="relative">
-            <img
-              src="https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/13efd93d-1ca2-4787-a753-a6c3014c219f.jpg"
-              alt="Эстетика"
-              className="w-full object-cover"
-              style={{ aspectRatio: "3/4", filter: "sepia(15%) contrast(95%)" }}
-            />
-            <div className="absolute bottom-6 left-6 right-6 bg-background/90 p-5 border border-border">
-              <p
-                className="text-foreground/80 leading-relaxed"
-                style={{
-                  fontFamily: "Cormorant Garamond, serif",
-                  fontSize: "1.05rem",
-                  fontStyle: "italic",
-                  fontWeight: 300,
-                }}
-              >
-                «Ваша единственная забота — сказать "Да".»
-              </p>
-            </div>
-          </div>
+          {/* Visual side — rotating photos */}
+          <ServicePhotoSlider />
         </div>
       </div>
     </section>
