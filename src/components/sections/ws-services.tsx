@@ -41,8 +41,8 @@ export function WsServices() {
               fontWeight: 400,
             }}
           >
-            <span style={{ color: "hsl(345, 45%, 28%)" }}>Думаем</span> за вас.<br />
-            <em><span style={{ color: "hsl(345, 45%, 28%)" }}>Контролируем</span> за вас.</em>
+            Ваш праздник — <span style={{ color: "hsl(345, 45%, 28%)" }}>наша</span> забота.<br />
+            <em>От первой идеи до <span style={{ color: "hsl(345, 45%, 28%)" }}>последнего танца.</span></em>
           </h2>
         </div>
 
