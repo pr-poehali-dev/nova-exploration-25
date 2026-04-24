@@ -43,16 +43,22 @@ export function WsStories() {
                 Обо мне
               </span>
               <div>
-                <p className="text-[9px] tracking-[0.15em] uppercase mb-1.5 font-semibold" style={{ color: cherry }}>
+                <p className="text-[9px] tracking-[0.15em] uppercase mb-0.5 font-semibold" style={{ color: cherry }}>
                   Катерина Кузнецова
                 </p>
                 <p
-                  className="leading-snug mb-4"
-                  style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "0.85rem", fontStyle: "italic", fontWeight: 300, color: darkText }}
+                  className="leading-snug mb-3"
+                  style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "0.78rem", fontStyle: "italic", fontWeight: 300, color: darkText }}
                 >
                   Организатор и координатор свадебных торжеств
                 </p>
-                <div className="border-t pt-3 space-y-1.5 text-center" style={{ borderColor: sand }}>
+                <p className="text-[8px] leading-relaxed mb-2 font-light" style={{ color: darkText }}>
+                  Моя задача — подарить вам праздник и спокойствие в важный день. Чтобы вы думали только о друг друге, а не о том, приехал ли флорист и правильно ли расставлены столы.
+                </p>
+                <p className="text-[8px] leading-relaxed font-light" style={{ color: muteText }}>
+                  Каждая свадьба для меня — это история. Ваша история. И я хочу, чтобы она была рассказана именно так, как вы об этом мечтали.
+                </p>
+                <div className="border-t pt-2.5 mt-3 space-y-1 text-center" style={{ borderColor: sand }}>
                   <p className="text-[8px] tracking-widest uppercase" style={{ color: muteText }}>Набережные Челны · Казань</p>
                   <p className="text-[8px] tracking-widest uppercase font-semibold" style={{ color: cherry }}>Консультация — бесплатно</p>
                 </div>
@@ -83,9 +89,9 @@ export function WsStories() {
               </span>
               <div className="space-y-2.5">
                 {[
-                  { label: "Организатор", desc: "Свадьба под ключ — от идеи до последнего танца", price: "от 30 000 ₽" },
-                  { label: "Координатор", desc: "Сопровождение в день торжества — вы только радуетесь", price: "15 000 ₽" },
-                  { label: "Частичное планирование", desc: "Помощь там, где вы застряли", price: "от 5 000 ₽" },
+                  { label: "Организатор", desc: "Свадьба под ключ — от идеи до последнего танца молодожёнов", price: "от 30 000 ₽" },
+                  { label: "Координатор", desc: "Сопровождение в день торжества — вы только наслаждаетесь вашим днём", price: "15 000 ₽" },
+                  { label: "Частичное планирование", desc: "Помогаю разобраться с самыми важными и необходимыми вопросами", price: "от 5 000 ₽" },
                 ].map((s) => (
                   <div key={s.label} className="border-b pb-2" style={{ borderColor: sand }}>
                     <p className="text-[8px] tracking-[0.15em] uppercase mb-0.5 font-semibold" style={{ color: cherry }}>{s.label}</p>
