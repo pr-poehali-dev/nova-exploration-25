@@ -88,15 +88,16 @@ export function WsVision() {
             <span className="text-sm" style={{ color: "hsl(345, 45%, 28%)" }}>✦</span>
           </div>
           <blockquote
-            className="text-foreground/80 max-w-xl mx-auto leading-relaxed"
+            className="max-w-xl mx-auto leading-relaxed"
             style={{
               fontFamily: "Cormorant Garamond, serif",
               fontSize: "clamp(1.2rem, 2.5vw, 1.6rem)",
               fontStyle: "italic",
               fontWeight: 300,
+              color: "hsl(345, 45%, 28%)",
             }}
           >
-            «Она была именно тем, о чём он не знал, что ищет, — и тем, без чего больше не мог обойтись.»
+            «Ты слишком добра, чтобы изводить меня. Позволь мне объясниться. Моя любовь к тебе всё росла — и я не мог не признаться, хотя знал, что это против воли рассудка.»
           </blockquote>
           <p className="text-muted-foreground text-xs tracking-[0.2em] uppercase mt-4">— Джейн Остин, Гордость и предубеждение</p>
         </div>

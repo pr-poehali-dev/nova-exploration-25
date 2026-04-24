@@ -27,7 +27,7 @@ export function WsHero() {
       {/* Nav */}
       <header className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-8 md:px-16 pt-8">
         <div
-          className="text-white/90 tracking-[0.25em] uppercase"
+          className="text-white tracking-[0.25em] uppercase"
           style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 700, fontSize: "1.1rem" }}
         >
           wabi sabi studio
@@ -45,7 +45,7 @@ export function WsHero() {
         <div
           className={`transition-all duration-1000 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
         >
-          <p className="text-xs tracking-[0.3em] uppercase mb-6 font-bold" style={{ color: "hsl(345, 45%, 28%)" }}>
+          <p className="text-white text-xs tracking-[0.3em] uppercase mb-6 font-bold">
             Набережные Челны · Казань
           </p>
           <h1
@@ -56,11 +56,11 @@ export function WsHero() {
               fontWeight: 300,
             }}
           >
-            Ваше <em style={{ color: "hsl(345, 45%, 28%)" }}>спокойствие</em> —<br />
+            Ваше спокойствие —<br />
             моя главная задача.
           </h1>
-          <p className="text-white/70 text-base md:text-lg font-light tracking-wide max-w-md mb-10">
-            Организатор и координатор <span style={{ color: "hsl(345, 45%, 28%)" }}>свадебных торжеств</span>
+          <p className="text-white text-base md:text-lg font-light tracking-wide max-w-md mb-10">
+            Организатор и координатор свадебных торжеств
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a
