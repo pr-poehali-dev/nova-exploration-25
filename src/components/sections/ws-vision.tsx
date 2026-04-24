@@ -108,32 +108,32 @@ function QuoteCarousel() {
 
 const moodImages = [
   {
-    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/fd2db6e6-0e2b-4720-a733-ba2b9fba3a31.jpg",
-    caption: "Двое в своём мире",
+    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/012eedee-91ff-4b8b-9133-8b15355a30a1.jpg",
+    caption: "Фата на ветру",
     rotate: "-2deg",
     size: "tall",
   },
   {
-    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/bae3cb59-172f-4fa1-b284-226e1a89301f.jpg",
-    caption: "Момент, который останется навсегда",
+    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/735a4fdc-a0f6-4113-a44e-54f23a34b17b.jpg",
+    caption: "Смеяться над шутками друг друга",
     rotate: "1.5deg",
     size: "normal",
   },
   {
-    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/db97683e-bb6c-4c4f-869b-7159299070f6.jpg",
-    caption: "Прикосновение",
+    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/309450b5-2bd7-4744-b5c6-063167517fbd.jpg",
+    caption: "Детали торжества",
     rotate: "-1.5deg",
     size: "normal",
   },
   {
-    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/099c4590-cfe7-4ecc-ac99-a7feacd6ee07.jpg",
-    caption: "Кольца — символ вечного",
+    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/b89d8df2-5946-418b-85c9-d23de5beb91c.jpg",
+    caption: "Навсегда вместе",
     rotate: "2deg",
     size: "tall",
   },
   {
-    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/94a7ca97-743a-4da3-9ff9-44c1772b6a7a.jpg",
-    caption: "История, рассказанная с любовью",
+    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/d48172b9-5ad3-45e0-affe-193769bee577.jpg",
+    caption: "Утро невесты",
     rotate: "-1deg",
     size: "wide",
   },

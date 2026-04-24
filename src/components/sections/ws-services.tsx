@@ -4,23 +4,39 @@ import Icon from "@/components/ui/icon"
 const servicePhotos = [
   {
     src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/fd2db6e6-0e2b-4720-a733-ba2b9fba3a31.jpg",
-    caption: "«Ваша единственная забота — сказать \u00abДа\u00bb.»",
+    caption: "«Ваша единственная забота — сказать Да.»",
   },
   {
-    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/6d4c2b92-0b2e-42d9-8d72-f3d8952cd4d7.jpg",
+    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/bae3cb59-172f-4fa1-b284-226e1a89301f.jpg",
+    caption: "«Момент, который останется навсегда.»",
+  },
+  {
+    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/db97683e-bb6c-4c4f-869b-7159299070f6.jpg",
     caption: "«Каждая деталь — на своём месте.»",
   },
   {
-    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/e6fd86bc-132b-40a3-b4b9-1e20e517735f.jpg",
+    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/099c4590-cfe7-4ecc-ac99-a7feacd6ee07.jpg",
+    caption: "«Кольца — символ вечного.»",
+  },
+  {
+    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/94a7ca97-743a-4da3-9ff9-44c1772b6a7a.jpg",
     caption: "«Просто наслаждайтесь моментом.»",
   },
   {
-    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/a63f12fc-cce7-4180-96a4-cc4fcca61885.jpg",
+    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/6d4c2b92-0b2e-42d9-8d72-f3d8952cd4d7.jpg",
     caption: "«Рядом — всегда.»",
   },
   {
-    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/d2f58b00-be89-4c67-aaac-70c8c6f44163.jpg",
+    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/e6fd86bc-132b-40a3-b4b9-1e20e517735f.jpg",
     caption: "«Ваш день — ваша история.»",
+  },
+  {
+    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/a63f12fc-cce7-4180-96a4-cc4fcca61885.jpg",
+    caption: "«Ваша единственная забота — сказать Да.»",
+  },
+  {
+    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/d2f58b00-be89-4c67-aaac-70c8c6f44163.jpg",
+    caption: "«Каждая деталь создаёт атмосферу.»",
   },
 ]
 
