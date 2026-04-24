@@ -107,36 +107,15 @@ function QuoteCarousel() {
 }
 
 const moodImages = [
-  {
-    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/012eedee-91ff-4b8b-9133-8b15355a30a1.jpg",
-    caption: "Фата на ветру",
-    rotate: "-2deg",
-    size: "tall",
-  },
-  {
-    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/735a4fdc-a0f6-4113-a44e-54f23a34b17b.jpg",
-    caption: "Смеяться над шутками друг друга",
-    rotate: "1.5deg",
-    size: "normal",
-  },
-  {
-    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/309450b5-2bd7-4744-b5c6-063167517fbd.jpg",
-    caption: "Детали торжества",
-    rotate: "-1.5deg",
-    size: "normal",
-  },
-  {
-    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/b89d8df2-5946-418b-85c9-d23de5beb91c.jpg",
-    caption: "Навсегда вместе",
-    rotate: "2deg",
-    size: "tall",
-  },
-  {
-    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/d48172b9-5ad3-45e0-affe-193769bee577.jpg",
-    caption: "Утро невесты",
-    rotate: "-1deg",
-    size: "wide",
-  },
+  { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/012eedee-91ff-4b8b-9133-8b15355a30a1.jpg", caption: "Фата на ветру" },
+  { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/735a4fdc-a0f6-4113-a44e-54f23a34b17b.jpg", caption: "Смеяться вместе" },
+  { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/b89d8df2-5946-418b-85c9-d23de5beb91c.jpg", caption: "Навсегда вместе" },
+  { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/d48172b9-5ad3-45e0-affe-193769bee577.jpg", caption: "Утро невесты" },
+  { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/6e564500-793f-4deb-813e-b0947d045df9.jpg", caption: "Детали дня" },
+  { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/c491c222-2134-40ff-8bf2-fd00189cda73.jpg", caption: "Атмосфера утра" },
+  { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/8febe44d-85b6-43e6-b39f-69cb2318d0d7.jpg", caption: "Поцелуй" },
+  { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/efa76973-86f5-4f77-84f1-194cea5b6a05.jpg", caption: "Радость" },
+  { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/538cb872-0a69-41a9-9496-214d056797d9.jpg", caption: "Лёгкость" },
 ]
 
 export function WsVision() {
@@ -160,41 +139,44 @@ export function WsVision() {
           </h2>
         </div>
 
-        {/* Collage grid */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-5">
-          {moodImages.map((img, i) => (
-            <div
-              key={i}
-              className="group relative overflow-hidden cursor-pointer"
-              style={{
-                transform: `rotate(${img.rotate})`,
-                transition: "transform 0.4s ease",
-              }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLDivElement).style.transform = "rotate(0deg) scale(1.02)"
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLDivElement).style.transform = `rotate(${img.rotate}) scale(1)`
-              }}
-            >
-              <div className="photo-tape relative">
+        {/* Photo marquee strip */}
+        <div className="overflow-hidden -mx-6 md:-mx-16">
+          <div
+            className="flex gap-4"
+            style={{
+              animation: "visionMarquee 35s linear infinite",
+              width: "max-content",
+            }}
+          >
+            {[...moodImages, ...moodImages].map((img, i) => (
+              <div
+                key={i}
+                className="group relative shrink-0 overflow-hidden"
+                style={{ width: "260px" }}
+              >
                 <img
                   src={img.src}
                   alt={img.caption}
-                  className="w-full object-cover"
-                  style={{
-                    aspectRatio: img.size === "tall" ? "2/3" : img.size === "wide" ? "4/3" : "3/4",
-                    filter: "contrast(97%) brightness(98%)",
-                  }}
+                  className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  style={{ height: "340px", filter: "contrast(97%) brightness(98%)" }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <p className="absolute bottom-3 left-3 right-3 text-white/0 group-hover:text-white/90 transition-all duration-300 text-xs font-light italic" style={{ fontFamily: "Cormorant Garamond, serif" }}>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <p
+                  className="absolute bottom-4 left-4 right-4 text-white/0 group-hover:text-white/90 transition-all duration-300 text-sm font-light italic"
+                  style={{ fontFamily: "Cormorant Garamond, serif" }}
+                >
                   {img.caption}
                 </p>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
+        <style>{`
+          @keyframes visionMarquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+        `}</style>
 
         {/* Rotating Quotes */}
         <QuoteCarousel />
