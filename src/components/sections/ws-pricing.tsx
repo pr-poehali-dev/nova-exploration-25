@@ -40,6 +40,9 @@ export function WsPricing() {
     <section id="pricing" className="py-28 px-6 md:px-16 bg-background">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
+          <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-4">
+            Стоимость
+          </p>
           <h2
             className="text-foreground leading-[1.2]"
             style={{

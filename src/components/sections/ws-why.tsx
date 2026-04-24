@@ -102,7 +102,7 @@ export function WsWhy() {
 
         {/* Marquee strip */}
         <div className="mt-20 overflow-hidden border-t border-b border-border py-5">
-          <div className="flex gap-12 animate-marquee whitespace-nowrap w-max">
+          <div className="flex gap-12 whitespace-nowrap w-max" style={{ animation: "marquee 65s linear infinite" }}>
             {Array(6).fill([
               "Организация свадьбы",
               "·",
