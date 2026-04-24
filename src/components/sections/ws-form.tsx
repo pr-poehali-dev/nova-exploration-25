@@ -158,9 +158,10 @@ export function WsForm() {
                   onClick={() => setForm((p) => ({ ...p, contactMethod: opt }))}
                   className={`px-4 py-2 text-xs tracking-wide border transition-all ${
                     form.contactMethod === opt
-                      ? "bg-foreground text-background border-foreground"
+                      ? "text-white border-transparent"
                       : "bg-transparent text-foreground border-border hover:border-foreground/30"
                   }`}
+                  style={form.contactMethod === opt ? { background: "hsl(145, 20%, 32%)" } : undefined}
                 >
                   {opt}
                 </button>
@@ -225,9 +226,10 @@ export function WsForm() {
                   onClick={() => setForm((p) => ({ ...p, hasStyle: opt }))}
                   className={`px-6 py-2 text-xs tracking-wide border transition-all ${
                     form.hasStyle === opt
-                      ? "bg-foreground text-background border-foreground"
+                      ? "text-white border-transparent"
                       : "bg-transparent text-foreground border-border hover:border-foreground/30"
                   }`}
+                  style={form.hasStyle === opt ? { background: "hsl(345, 45%, 28%)" } : undefined}
                 >
                   {opt}
                 </button>
@@ -279,7 +281,8 @@ export function WsForm() {
 
           <button
             type="submit"
-            className="w-full py-4 bg-foreground text-background text-xs tracking-[0.25em] uppercase hover:opacity-80 transition-opacity mt-4"
+            className="w-full py-4 text-white text-xs tracking-[0.25em] uppercase hover:opacity-85 transition-opacity mt-4"
+            style={{ background: "hsl(345, 45%, 28%)" }}
           >
             Записаться на консультацию
           </button>

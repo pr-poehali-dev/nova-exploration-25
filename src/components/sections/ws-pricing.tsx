@@ -57,13 +57,14 @@ export function WsPricing() {
               key={i}
               className={`group flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-6 border transition-all duration-300 ${
                 plan.highlight
-                  ? "bg-foreground text-background border-foreground"
+                  ? "text-white border-transparent"
                   : "bg-background border-border hover:border-foreground/20"
               }`}
+              style={plan.highlight ? { background: "hsl(345, 45%, 28%)" } : undefined}
             >
               <div className="flex-1">
                 <h3
-                  className={`mb-1 ${plan.highlight ? "text-background" : "text-foreground"}`}
+                  className={`mb-1 ${plan.highlight ? "text-white" : "text-foreground"}`}
                   style={{
                     fontFamily: "Cormorant Garamond, serif",
                     fontSize: "1.25rem",
@@ -72,13 +73,13 @@ export function WsPricing() {
                 >
                   {plan.name}
                 </h3>
-                <p className={`text-sm font-light ${plan.highlight ? "text-background/70" : "text-muted-foreground"}`}>
+                <p className={`text-sm font-light ${plan.highlight ? "text-white/75" : "text-muted-foreground"}`}>
                   {plan.description}
                 </p>
               </div>
               <div className="shrink-0 text-right">
                 <p
-                  className={`tracking-wide ${plan.highlight ? "text-background" : "text-foreground"}`}
+                  className={`tracking-wide ${plan.highlight ? "text-white" : "text-foreground"}`}
                   style={{
                     fontFamily: "Cormorant Garamond, serif",
                     fontSize: "1.4rem",
@@ -100,7 +101,8 @@ export function WsPricing() {
         <div className="text-center mt-10">
           <a
             href="#form"
-            className="inline-block px-10 py-3 bg-foreground text-background text-xs tracking-[0.2em] uppercase hover:opacity-80 transition-opacity"
+            className="inline-block px-10 py-3 text-white text-xs tracking-[0.2em] uppercase hover:opacity-85 transition-opacity"
+            style={{ background: "hsl(145, 20%, 32%)" }}
           >
             Обсудить на консультации
           </a>

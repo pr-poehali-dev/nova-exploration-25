@@ -65,7 +65,8 @@ export function WsHero() {
           <div className="flex flex-col sm:flex-row gap-4">
             <a
               href="#form"
-              className="inline-block px-8 py-3 bg-white/90 text-stone-800 text-xs tracking-[0.2em] uppercase hover:bg-white transition-colors"
+              className="inline-block px-8 py-3 text-white text-xs tracking-[0.2em] uppercase hover:opacity-90 transition-opacity"
+              style={{ background: "hsl(345, 45%, 28%)" }}
             >
               Записаться на консультацию
             </a>
@@ -73,7 +74,7 @@ export function WsHero() {
               href="#services"
               className="inline-block px-8 py-3 border border-white/50 text-white/80 text-xs tracking-[0.2em] uppercase hover:border-white hover:text-white transition-colors"
             >
-              Узнать об услугах
+              Об услугах
             </a>
           </div>
         </div>
@@ -83,7 +84,7 @@ export function WsHero() {
       <div className="absolute bottom-8 right-8 md:right-16 z-10 flex flex-col items-center gap-2">
         <div className="w-px h-12 bg-white/30 animate-float" />
         <span className="text-white/40 text-[10px] tracking-[0.2em] uppercase rotate-90 origin-center translate-y-6">
-          scroll
+          вниз
         </span>
       </div>
     </section>

@@ -49,7 +49,7 @@ export function WsServices() {
         {/* Tabs */}
         <div className="flex flex-col sm:flex-row gap-3 mb-12 justify-center">
           {[
-            { key: "organizer", label: "Организатор", sub: "Full Service" },
+            { key: "organizer", label: "Организатор", sub: "Полный цикл" },
             { key: "partial", label: "Частичное планирование", sub: "Помощь на этапе" },
             { key: "coordinator", label: "Координатор", sub: "День торжества" },
           ].map((tab) => (

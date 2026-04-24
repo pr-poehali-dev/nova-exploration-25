@@ -85,7 +85,7 @@ export function WsVision() {
         {/* Quote */}
         <div className="text-center mt-20">
           <div className="ornament-divider max-w-lg mx-auto mb-8">
-            <span className="text-muted-foreground text-sm">✦</span>
+            <span className="text-sm" style={{ color: "hsl(145, 20%, 32%)" }}>✦</span>
           </div>
           <blockquote
             className="text-foreground/80 max-w-xl mx-auto leading-relaxed"
@@ -96,9 +96,9 @@ export function WsVision() {
               fontWeight: 300,
             }}
           >
-            «A woman's heart should be so hidden in God that a man has to seek Him — just to find her.»
+            «Сердце женщины должно быть так сокрыто в Боге, что мужчине придётся искать Его — чтобы найти её.»
           </blockquote>
-          <p className="text-muted-foreground text-xs tracking-[0.2em] uppercase mt-4">— Maya Angelou</p>
+          <p className="text-muted-foreground text-xs tracking-[0.2em] uppercase mt-4">— Майя Энджелоу</p>
         </div>
       </div>
     </section>

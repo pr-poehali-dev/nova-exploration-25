@@ -1,5 +1,6 @@
 import { useState } from "react"
 import Icon from "@/components/ui/icon"
+import React from "react"
 
 const faqs = [
   {
@@ -54,11 +55,12 @@ export function WsFaq() {
                 onClick={() => setOpen(open === i ? null : i)}
               >
                 <p
-                  className={`text-foreground font-light leading-snug pr-4 transition-opacity ${open === i ? "opacity-100" : "opacity-75"}`}
+                  className={`font-light leading-snug pr-4 transition-all ${open === i ? "opacity-100" : "opacity-75 text-foreground"}`}
                   style={{
                     fontFamily: "Cormorant Garamond, serif",
                     fontSize: "1.1rem",
                     fontWeight: open === i ? 500 : 400,
+                    color: open === i ? "hsl(345, 45%, 28%)" : undefined,
                   }}
                 >
                   {faq.q}
@@ -66,7 +68,8 @@ export function WsFaq() {
                 <Icon
                   name={open === i ? "Minus" : "Plus"}
                   size={16}
-                  className="text-muted-foreground shrink-0 mt-1"
+                  className="shrink-0 mt-1"
+                  style={{ color: open === i ? "hsl(345, 45%, 28%)" : undefined } as React.CSSProperties}
                 />
               </button>
               {open === i && (

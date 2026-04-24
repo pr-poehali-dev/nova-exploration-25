@@ -62,13 +62,13 @@ export function WsFooter() {
 
         <div className="border-t border-border pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <p className="text-muted-foreground text-xs font-light tracking-wide">
-            © 2024 Wabi Sabi Studio. Все права защищены.
+            © 2025 Wabi Sabi Studio. Все права защищены.
           </p>
           <p
             className="text-muted-foreground/50 text-xs tracking-[0.2em]"
             style={{ fontFamily: "Cormorant Garamond, serif", fontStyle: "italic" }}
           >
-            promise to dance through life with you
+            обещаю танцевать с тобой сквозь жизнь
           </p>
         </div>
       </div>
