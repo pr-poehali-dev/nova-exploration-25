@@ -72,7 +72,13 @@ function ServicePhotoSlider() {
           src={photo.src}
           alt={photo.caption}
           className="w-full object-cover"
-          style={{ aspectRatio: "3/4", filter: "contrast(96%) brightness(98%)" }}
+          style={{
+            aspectRatio: "3/4",
+            filter: "contrast(96%) brightness(98%)",
+            objectFit: "cover",
+            objectPosition: "center",
+            transform: photo.src.includes("099c4590") ? "scale(1.15)" : undefined,
+          }}
         />
         <div className="absolute bottom-6 left-6 right-6 bg-background/90 p-5 border border-border">
           <p
