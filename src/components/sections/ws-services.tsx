@@ -7,10 +7,6 @@ const servicePhotos = [
     caption: "«Ваша единственная забота — сказать Да.»",
   },
   {
-    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/bae3cb59-172f-4fa1-b284-226e1a89301f.jpg",
-    caption: "«Момент, который останется навсегда.»",
-  },
-  {
     src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/db97683e-bb6c-4c4f-869b-7159299070f6.jpg",
     caption: "«Каждая деталь — на своём месте.»",
   },
@@ -32,11 +28,27 @@ const servicePhotos = [
   },
   {
     src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/a63f12fc-cce7-4180-96a4-cc4fcca61885.jpg",
-    caption: "«Ваша единственная забота — сказать Да.»",
+    caption: "«Вместе — это навсегда.»",
   },
   {
-    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/d2f58b00-be89-4c67-aaac-70c8c6f44163.jpg",
+    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/e78e4b66-034b-447b-aece-ec42faae6a82.jpg",
+    caption: "«Утро невесты — начало нового пути.»",
+  },
+  {
+    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/b13c8c39-c8ae-41de-aefa-d11df08c8385.jpg",
+    caption: "«Букет и туфли — первые детали дня.»",
+  },
+  {
+    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/7f145795-54fe-4e93-b889-7bf1211b7b4b.jpg",
     caption: "«Каждая деталь создаёт атмосферу.»",
+  },
+  {
+    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/22092d33-77ca-4324-9e5d-15726f5680c6.jpg",
+    caption: "«Тени двух сердец.»",
+  },
+  {
+    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/86f8f75e-2c23-4431-ae65-ad20b1cf28c6.jpg",
+    caption: "«Ваш день — ваши правила.»",
   },
 ]
 
