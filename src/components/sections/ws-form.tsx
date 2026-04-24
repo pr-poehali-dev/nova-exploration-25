@@ -161,7 +161,7 @@ export function WsForm() {
                       ? "text-white border-transparent"
                       : "bg-transparent text-foreground border-border hover:border-foreground/30"
                   }`}
-                  style={form.contactMethod === opt ? { background: "hsl(145, 20%, 32%)" } : undefined}
+                  style={form.contactMethod === opt ? { background: "hsl(345, 45%, 28%)" } : undefined}
                 >
                   {opt}
                 </button>

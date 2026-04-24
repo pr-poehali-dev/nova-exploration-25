@@ -45,7 +45,7 @@ export function WsHero() {
         <div
           className={`transition-all duration-1000 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
         >
-          <p className="text-white/60 text-xs tracking-[0.3em] uppercase mb-6 font-light">
+          <p className="text-xs tracking-[0.3em] uppercase mb-6 font-light" style={{ color: "hsl(345, 65%, 75%)" }}>
             Набережные Челны · Казань
           </p>
           <h1

@@ -102,7 +102,7 @@ export function WsPricing() {
           <a
             href="#form"
             className="inline-block px-10 py-3 text-white text-xs tracking-[0.2em] uppercase hover:opacity-85 transition-opacity"
-            style={{ background: "hsl(145, 20%, 32%)" }}
+            style={{ background: "hsl(345, 45%, 28%)" }}
           >
             Обсудить на консультации
           </a>

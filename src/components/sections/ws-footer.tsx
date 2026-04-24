@@ -40,20 +40,25 @@ export function WsFooter() {
             <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mb-4">
               Связаться
             </p>
-            <ul className="space-y-2 text-foreground/65 font-light text-sm">
+            <ul className="space-y-3 text-foreground/65 font-light text-sm">
               <li>
-                <a href="#form" className="hover:text-foreground transition-colors">
-                  Оставить заявку
+                <a href="tel:+79959815904" className="hover:text-foreground transition-colors">
+                  +7 995 981-59-04
                 </a>
               </li>
               <li>
-                <a href="https://t.me/" className="hover:text-foreground transition-colors">
-                  Telegram
+                <a href="mailto:loarnoar@gmail.com" className="hover:text-foreground transition-colors">
+                  loarnoar@gmail.com
                 </a>
               </li>
               <li>
-                <a href="https://instagram.com/" className="hover:text-foreground transition-colors">
-                  Instagram
+                <a href="https://t.me/kateandtheend" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
+                  Telegram: @kateandtheend
+                </a>
+              </li>
+              <li>
+                <a href="#form" className="hover:text-foreground transition-colors" style={{ color: "hsl(345, 45%, 28%)" }}>
+                  Оставить заявку →
                 </a>
               </li>
             </ul>
@@ -62,7 +67,7 @@ export function WsFooter() {
 
         <div className="border-t border-border pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <p className="text-muted-foreground text-xs font-light tracking-wide">
-            © 2025 Wabi Sabi Studio. Все права защищены.
+            © 2026 Wabi Sabi Studio — начало пути.
           </p>
           <p
             className="text-muted-foreground/50 text-xs tracking-[0.2em]"

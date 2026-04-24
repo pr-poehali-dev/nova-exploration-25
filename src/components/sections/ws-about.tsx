@@ -6,13 +6,18 @@ export function WsAbout() {
           {/* Photo collage */}
           <div className="relative">
             <div className="relative w-full max-w-sm mx-auto md:mx-0">
-              {/* Main image */}
-              <div className="photo-tape relative z-10">
+              {/* Main image with tape */}
+              <div className="relative z-10">
+                {/* Tape strip top-left */}
+                <div
+                  className="absolute -top-3 left-1/2 -translate-x-1/2 z-20"
+                  style={{ width: "64px", height: "20px", background: "rgba(210, 190, 160, 0.55)", transform: "translateX(-50%) rotate(-1deg)" }}
+                />
                 <img
-                  src="https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/files/5b8f5aa6-8605-481b-8a39-aac66e299407.jpg"
+                  src="https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/ca05874b-c9cf-439d-a9b3-a52d97e07d8c.jpg"
                   alt="Организатор"
-                  className="w-full object-cover"
-                  style={{ aspectRatio: "3/4", filter: "sepia(8%) contrast(97%)" }}
+                  className="w-full object-cover object-top"
+                  style={{ aspectRatio: "3/4" }}
                 />
               </div>
               {/* Floating quote card */}
@@ -33,13 +38,13 @@ export function WsAbout() {
               </div>
               {/* Decorative stripe patch */}
               <div
-                className="absolute -top-4 -left-4 w-16 h-20 opacity-25 border"
+                className="absolute -top-4 -left-4 w-16 h-20 opacity-20 border"
                 style={{
-                  borderColor: "hsl(145, 20%, 32%)",
+                  borderColor: "hsl(345, 45%, 28%)",
                   backgroundImage: `repeating-linear-gradient(
                     90deg,
-                    hsl(145, 20%, 32%) 0px,
-                    hsl(145, 20%, 32%) 2px,
+                    hsl(345, 45%, 28%) 0px,
+                    hsl(345, 45%, 28%) 2px,
                     transparent 2px,
                     transparent 8px
                   )`,
@@ -84,10 +89,10 @@ export function WsAbout() {
             <div className="mt-10 pt-8 border-t border-border">
               <a
                 href="#form"
-                className="inline-block px-8 py-3 text-white text-xs tracking-[0.2em] uppercase hover:opacity-90 transition-opacity"
-                style={{ background: "hsl(145, 20%, 32%)" }}
+                className="inline-block text-xs tracking-[0.2em] uppercase hover:opacity-70 transition-opacity"
+                style={{ color: "hsl(345, 45%, 28%)" }}
               >
-                Познакомимся?
+                Записаться на бесплатную консультацию →
               </a>
             </div>
           </div>

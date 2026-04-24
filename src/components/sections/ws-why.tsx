@@ -2,26 +2,26 @@ const reasons = [
   {
     number: "01",
     title: "Вы думаете только о «Да»",
-    text: "Все переговоры, согласования, напоминания и контроль — на мне. Вы наслаждаетесь процессом.",
+    text: "Все переговоры, согласования, напоминания и контроль — на мне. Вам остаётся лишь наслаждаться моментом.",
     accent: "cherry",
   },
   {
     number: "02",
     title: "Экономия бюджета",
-    text: "Знаю, как оптимизировать смету без потери качества. Мои связи с поставщиками — ваша выгода.",
-    accent: "sage",
+    text: "Помогу распределить бюджет грамотно — без лишних трат и неприятных сюрпризов в конце.",
+    accent: "cherry",
   },
   {
     number: "03",
     title: "Всегда на связи",
-    text: "Любой вопрос «А что если...?» не остаётся в пустоте. Отвечаю быстро и по делу.",
+    text: "Любой вопрос «А что если...?» не останется без ответа. Отвечу вам быстро и по делу.",
     accent: "cherry",
   },
   {
     number: "04",
     title: "Ваша история — не шаблон",
     text: "Каждая свадьба уникальна. Я не предлагаю готовые сценарии — я строю ваш день с нуля.",
-    accent: "sage",
+    accent: "cherry",
   },
 ]
 
@@ -61,7 +61,7 @@ export function WsWhy() {
                     fontSize: "0.9rem",
                     fontWeight: 300,
                     letterSpacing: "0.1em",
-                    color: r.accent === "cherry" ? "hsl(345, 45%, 28%)" : "hsl(145, 20%, 32%)",
+                    color: "hsl(345, 45%, 28%)",
                     opacity: 0.7,
                   }}
                 >
@@ -70,7 +70,7 @@ export function WsWhy() {
                 <div
                   className="pt-5 flex-1"
                   style={{
-                    borderTop: `1px solid ${r.accent === "cherry" ? "hsl(345, 45%, 28%, 0.25)" : "hsl(145, 20%, 32%, 0.25)"}`,
+                    borderTop: "1px solid hsl(345 45% 28% / 0.2)",
                   }}
                 >
                   <h4
@@ -79,7 +79,7 @@ export function WsWhy() {
                       fontFamily: "Cormorant Garamond, serif",
                       fontSize: "1.2rem",
                       fontWeight: 400,
-                      color: r.accent === "cherry" ? "hsl(345, 45%, 28%)" : "hsl(145, 20%, 32%)",
+                      color: "hsl(345, 45%, 28%)",
                     }}
                   >
                     {r.title}
