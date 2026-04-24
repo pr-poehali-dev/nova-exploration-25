@@ -109,13 +109,14 @@ function QuoteCarousel() {
 const moodImages = [
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/012eedee-91ff-4b8b-9133-8b15355a30a1.jpg", caption: "Фата на ветру" },
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/735a4fdc-a0f6-4113-a44e-54f23a34b17b.jpg", caption: "Смеяться вместе" },
-  { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/b89d8df2-5946-418b-85c9-d23de5beb91c.jpg", caption: "Навсегда вместе" },
+  { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/b89d8df2-5946-418b-85c9-d23de5beb91c.jpg", caption: "Навсегда вместе", rotate: true },
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/d48172b9-5ad3-45e0-affe-193769bee577.jpg", caption: "Утро невесты" },
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/6e564500-793f-4deb-813e-b0947d045df9.jpg", caption: "Детали дня" },
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/c491c222-2134-40ff-8bf2-fd00189cda73.jpg", caption: "Атмосфера утра" },
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/8febe44d-85b6-43e6-b39f-69cb2318d0d7.jpg", caption: "Поцелуй" },
-  { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/efa76973-86f5-4f77-84f1-194cea5b6a05.jpg", caption: "Радость" },
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/538cb872-0a69-41a9-9496-214d056797d9.jpg", caption: "Лёгкость" },
+  { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/07baa306-c81f-4e47-ad8e-bc22cdf60482.jpg", caption: "Утро невесты" },
+  { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/faa44aa2-85ed-463e-89e6-2fb35a82fee1.jpg", caption: "Вечер торжества" },
 ]
 
 export function WsVision() {
@@ -158,7 +159,12 @@ export function WsVision() {
                   src={img.src}
                   alt={img.caption}
                   className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  style={{ height: "340px", filter: "contrast(97%) brightness(98%)" }}
+                  style={{
+                    height: "340px",
+                    filter: "contrast(97%) brightness(98%)",
+                    transform: (img as { rotate?: boolean }).rotate ? "rotate(90deg) scale(1.4)" : undefined,
+                    transformOrigin: "center center",
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <p

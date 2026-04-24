@@ -50,6 +50,14 @@ const servicePhotos = [
     src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/86f8f75e-2c23-4431-ae65-ad20b1cf28c6.jpg",
     caption: "«Ваш день — ваши правила.»",
   },
+  {
+    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/95dd9d65-6e57-41ec-8def-b71e8e5da182.jpg",
+    caption: "«Детали создают настроение.»",
+  },
+  {
+    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/3d756eda-ec81-4033-9501-4fb2c653fc33.jpg",
+    caption: "«Ваша единственная забота — сказать Да.»",
+  },
 ]
 
 function ServicePhotoSlider() {
