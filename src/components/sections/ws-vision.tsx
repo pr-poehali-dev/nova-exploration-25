@@ -109,14 +109,16 @@ function QuoteCarousel() {
 const moodImages = [
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/012eedee-91ff-4b8b-9133-8b15355a30a1.jpg", caption: "Фата на ветру" },
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/735a4fdc-a0f6-4113-a44e-54f23a34b17b.jpg", caption: "Смеяться вместе" },
-  { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/b89d8df2-5946-418b-85c9-d23de5beb91c.jpg", caption: "Навсегда вместе", rotate: true },
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/d48172b9-5ad3-45e0-affe-193769bee577.jpg", caption: "Утро невесты" },
-  { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/6e564500-793f-4deb-813e-b0947d045df9.jpg", caption: "Детали дня" },
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/c491c222-2134-40ff-8bf2-fd00189cda73.jpg", caption: "Атмосфера утра" },
-  { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/8febe44d-85b6-43e6-b39f-69cb2318d0d7.jpg", caption: "Поцелуй" },
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/538cb872-0a69-41a9-9496-214d056797d9.jpg", caption: "Лёгкость" },
-  { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/07baa306-c81f-4e47-ad8e-bc22cdf60482.jpg", caption: "Утро невесты" },
-  { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/faa44aa2-85ed-463e-89e6-2fb35a82fee1.jpg", caption: "Вечер торжества" },
+  { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/07baa306-c81f-4e47-ad8e-bc22cdf60482.jpg", caption: "Перед выходом" },
+  { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/faa44aa2-85ed-463e-89e6-2fb35a82fee1.jpg", caption: "Сборы с подружками" },
+  { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/43bc7a47-a274-4b16-8f57-51c1c32969a1.jpg", caption: "Первый торт вместе" },
+  { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/158876b5-a5cc-43fc-a2c1-68c3822410a3.jpg", caption: "Последний танец" },
+  { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/f8ec9bbb-2343-408d-abdc-b2fcdad093bc.jpg", caption: "Танцевальная ночь" },
+  { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/9a897430-05fe-46d5-87d0-e14b4b5fc765.jpg", caption: "За здоровье молодых" },
+  { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/3674fe24-41a1-4fa6-8a47-65e3ac4f585b.jpg", caption: "Объятия" },
 ]
 
 export function WsVision() {

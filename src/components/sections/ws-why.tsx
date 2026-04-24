@@ -52,7 +52,7 @@ export function WsWhy() {
             </p>
             <div className="relative">
               <img
-                src="https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/819c3bd0-c99c-461d-8641-e8f18cd37051.jpg"
+                src="https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/43bc7a47-a274-4b16-8f57-51c1c32969a1.jpg"
                 alt="Атмосфера свадьбы"
                 className="w-full object-cover"
                 style={{ aspectRatio: "4/3", filter: "contrast(96%) brightness(99%)" }}
