@@ -114,13 +114,17 @@ const moodImages = [
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/538cb872-0a69-41a9-9496-214d056797d9.jpg", caption: "Лёгкость" },
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/07baa306-c81f-4e47-ad8e-bc22cdf60482.jpg", caption: "Перед выходом" },
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/faa44aa2-85ed-463e-89e6-2fb35a82fee1.jpg", caption: "Сборы с подружками" },
-  { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/43bc7a47-a274-4b16-8f57-51c1c32969a1.jpg", caption: "Первый торт вместе" },
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/158876b5-a5cc-43fc-a2c1-68c3822410a3.jpg", caption: "Последний танец" },
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/f8ec9bbb-2343-408d-abdc-b2fcdad093bc.jpg", caption: "Танцевальная ночь" },
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/9a897430-05fe-46d5-87d0-e14b4b5fc765.jpg", caption: "За здоровье молодых" },
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/3674fe24-41a1-4fa6-8a47-65e3ac4f585b.jpg", caption: "Объятия" },
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/dfe17705-4801-466e-81b4-7102d074fb6a.jpg", caption: "Самый весёлый гость" },
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/ece42f75-9d2a-48ad-940f-43eb58b8909a.jpg", caption: "Первый поцелуй" },
+  { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/429a3e00-d2ee-48e3-aba9-1445eea45126.jpg", caption: "Друзья жениха" },
+  { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/f628b7e9-56ed-42be-861f-3be53d029056.jpg", caption: "Под диско-шаром" },
+  { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/bd867ec4-da1e-41ff-9c83-b0aae952ab3b.jpg", caption: "Стиль жениха" },
+  { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/be3228ed-3a6a-4540-9ee5-8d43c4f8aa3d.jpg", caption: "Шнуровка платья" },
+  { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/202a28ff-983a-4682-9eb7-6f71d13c04c1.jpg", caption: "Тени влюблённых" },
 ]
 
 export function WsVision() {
