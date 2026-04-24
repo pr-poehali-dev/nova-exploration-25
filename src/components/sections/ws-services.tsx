@@ -15,24 +15,12 @@ const servicePhotos = [
     caption: "«Кольца — символ вечного.»",
   },
   {
-    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/94a7ca97-743a-4da3-9ff9-44c1772b6a7a.jpg",
-    caption: "«Просто наслаждайтесь моментом.»",
-  },
-  {
-    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/6d4c2b92-0b2e-42d9-8d72-f3d8952cd4d7.jpg",
-    caption: "«Рядом — всегда.»",
-  },
-  {
     src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/e6fd86bc-132b-40a3-b4b9-1e20e517735f.jpg",
     caption: "«Ваш день — ваша история.»",
   },
   {
     src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/a63f12fc-cce7-4180-96a4-cc4fcca61885.jpg",
     caption: "«Вместе — это навсегда.»",
-  },
-  {
-    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/e78e4b66-034b-447b-aece-ec42faae6a82.jpg",
-    caption: "«Утро невесты — начало нового пути.»",
   },
   {
     src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/b13c8c39-c8ae-41de-aefa-d11df08c8385.jpg",
