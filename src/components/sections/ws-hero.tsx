@@ -27,16 +27,16 @@ export function WsHero() {
       {/* Nav */}
       <header className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-8 md:px-16 pt-8">
         <div
-          className="font-serif text-white/90 tracking-[0.25em] uppercase text-sm"
-          style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 300 }}
+          className="text-white/90 tracking-[0.25em] uppercase"
+          style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 400, fontSize: "1.1rem" }}
         >
           wabi sabi studio
         </div>
-        <nav className="hidden md:flex gap-8 text-xs tracking-widest uppercase font-semibold" style={{ color: "hsl(345, 45%, 28%)" }}>
-          <a href="#about" className="transition-colors hover:opacity-80">Обо мне</a>
-          <a href="#services" className="transition-colors hover:opacity-80">Услуги</a>
-          <a href="#pricing" className="transition-colors hover:opacity-80">Цены</a>
-          <a href="#form" className="transition-colors hover:opacity-80">Консультация</a>
+        <nav className="hidden md:flex gap-8 text-xs tracking-widest uppercase font-bold text-white">
+          <a href="#about" className="transition-opacity hover:opacity-70">Обо мне</a>
+          <a href="#services" className="transition-opacity hover:opacity-70">Услуги</a>
+          <a href="#pricing" className="transition-opacity hover:opacity-70">Цены</a>
+          <a href="#form" className="transition-opacity hover:opacity-70">Консультация</a>
         </nav>
       </header>
 
@@ -45,7 +45,7 @@ export function WsHero() {
         <div
           className={`transition-all duration-1000 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
         >
-          <p className="text-xs tracking-[0.3em] uppercase mb-6 font-bold" style={{ color: "hsl(345, 45%, 28%)" }}>
+          <p className="text-white/80 text-xs tracking-[0.3em] uppercase mb-6 font-bold">
             Набережные Челны · Казань
           </p>
           <h1

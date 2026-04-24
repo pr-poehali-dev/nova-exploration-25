@@ -1,3 +1,5 @@
+import { useState } from "react"
+
 const plans = [
   {
     name: "Консультация",
@@ -32,6 +34,8 @@ const plans = [
 ]
 
 export function WsPricing() {
+  const [active, setActive] = useState<number | null>(null)
+
   return (
     <section id="pricing" className="py-28 px-6 md:px-16 bg-background">
       <div className="max-w-5xl mx-auto">
@@ -53,41 +57,46 @@ export function WsPricing() {
             <a
               key={i}
               href="#form"
-              className={`group flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-6 border transition-all duration-300 cursor-pointer ${
-                plan.highlight
-                  ? "text-white border-transparent"
-                  : "bg-background border-border hover:border-[hsl(345,45%,28%)] hover:shadow-sm"
-              }`}
-              style={plan.highlight ? { background: "hsl(345, 45%, 28%)" } : undefined}
+              onClick={() => setActive(i)}
+              className="group flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-6 border transition-all duration-300 cursor-pointer"
+              style={
+                plan.highlight || active === i
+                  ? { background: "hsl(345, 45%, 28%)", borderColor: "hsl(345, 45%, 28%)", color: "white" }
+                  : { background: "hsl(var(--background))", borderColor: "hsl(var(--border))" }
+              }
             >
               <div className="flex-1">
                 <h3
-                  className={`mb-1 ${plan.highlight ? "text-white" : "text-foreground group-hover:text-[hsl(345,45%,28%)]"}`}
+                  className="mb-1"
                   style={{
                     fontFamily: "Cormorant Garamond, serif",
                     fontSize: "1.25rem",
-                    fontWeight: plan.highlight ? 500 : 400,
+                    fontWeight: plan.highlight || active === i ? 500 : 400,
+                    color: plan.highlight || active === i ? "white" : "hsl(var(--foreground))",
                     transition: "color 0.2s",
                   }}
                 >
                   {plan.name}
                 </h3>
-                <p className={`text-sm font-light ${plan.highlight ? "text-white/75" : "text-muted-foreground"}`}>
+                <p
+                  className="text-sm font-light"
+                  style={{ color: plan.highlight || active === i ? "rgba(255,255,255,0.75)" : "hsl(var(--muted-foreground))" }}
+                >
                   {plan.description}
                 </p>
               </div>
               <div className="shrink-0 text-right flex items-center gap-4">
                 <p
-                  className={`tracking-wide ${plan.highlight ? "text-white" : "text-foreground"}`}
                   style={{
                     fontFamily: "Cormorant Garamond, serif",
                     fontSize: "1.4rem",
                     fontWeight: 400,
+                    color: plan.highlight || active === i ? "white" : "hsl(var(--foreground))",
                   }}
                 >
                   {plan.price}
                 </p>
-                {!plan.highlight && (
+                {!(plan.highlight || active === i) && (
                   <span className="text-muted-foreground/40 group-hover:text-[hsl(345,45%,28%)] transition-colors text-sm">→</span>
                 )}
               </div>

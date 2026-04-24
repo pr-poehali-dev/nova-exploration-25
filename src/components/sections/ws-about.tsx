@@ -25,12 +25,13 @@ export function WsAbout() {
                 className="absolute -bottom-6 -right-6 md:-right-12 bg-[hsl(var(--card))] border border-[hsl(var(--border))] p-5 max-w-[220px] z-20 shadow-sm"
               >
                 <p
-                  className="text-foreground/80 leading-relaxed"
+                  className="leading-relaxed"
                   style={{
                     fontFamily: "Cormorant Garamond, serif",
                     fontSize: "0.95rem",
                     fontStyle: "italic",
                     fontWeight: 300,
+                    color: "hsl(345, 45%, 28%)",
                   }}
                 >
                   «Я займусь всеми важными и сложными вопросами — а вам остаётся лишь наслаждаться вашим прекрасным вечером.»
