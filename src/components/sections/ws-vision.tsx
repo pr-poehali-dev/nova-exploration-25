@@ -119,6 +119,8 @@ const moodImages = [
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/f8ec9bbb-2343-408d-abdc-b2fcdad093bc.jpg", caption: "Танцевальная ночь" },
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/9a897430-05fe-46d5-87d0-e14b4b5fc765.jpg", caption: "За здоровье молодых" },
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/3674fe24-41a1-4fa6-8a47-65e3ac4f585b.jpg", caption: "Объятия" },
+  { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/dfe17705-4801-466e-81b4-7102d074fb6a.jpg", caption: "Самый весёлый гость" },
+  { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/ece42f75-9d2a-48ad-940f-43eb58b8909a.jpg", caption: "Первый поцелуй" },
 ]
 
 export function WsVision() {

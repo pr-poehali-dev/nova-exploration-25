@@ -69,7 +69,7 @@ export function WsAbout() {
               }}
             >
               Человек,<br />
-              <em style={{ color: "hsl(345, 45%, 28%)" }}>который думает за вас</em>
+              <em style={{ color: "hsl(345, 45%, 28%)" }}>который позаботится о важном дне</em>
             </h2>
             <p
               className="mb-8 font-light"
