@@ -125,6 +125,7 @@ const moodImages = [
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/bd867ec4-da1e-41ff-9c83-b0aae952ab3b.jpg", caption: "Стиль жениха" },
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/be3228ed-3a6a-4540-9ee5-8d43c4f8aa3d.jpg", caption: "Шнуровка платья" },
   { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/202a28ff-983a-4682-9eb7-6f71d13c04c1.jpg", caption: "Тени влюблённых" },
+  { src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/4734a532-ba90-410e-aef6-a00faa3837fd.jpg", caption: "В этом году замуж" },
 ]
 
 export function WsVision() {
@@ -133,7 +134,7 @@ export function WsVision() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-4">
-            Моё видение
+            Атмосфера
           </p>
           <h2
             className="text-foreground leading-[1.2]"
@@ -143,8 +144,8 @@ export function WsVision() {
               fontWeight: 400,
             }}
           >
-            Тёплые моменты,<br />
-            <em>которые важно запечатлеть</em>
+            Именно так выглядит<br />
+            <em>день, о котором мечтают</em>
           </h2>
         </div>
 
