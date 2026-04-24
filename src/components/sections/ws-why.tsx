@@ -35,19 +35,20 @@ export function WsWhy() {
               Почему мне доверяют
             </p>
             <h2
-              className="text-foreground leading-[1.2] mb-6"
+              className="leading-[1.2] mb-6"
               style={{
                 fontFamily: "Cormorant Garamond, serif",
                 fontSize: "clamp(2rem, 4vw, 3rem)",
                 fontWeight: 400,
+                color: "hsl(30, 15%, 18%)",
               }}
             >
               Подход,<br />
-              <em>который меняет всё</em>
+              <em style={{ color: "hsl(345, 45%, 28%)" }}>который меняет всё</em>
             </h2>
             <p className="text-foreground/70 font-light leading-relaxed">
-              Я не просто организовываю мероприятия. Я беру на себя тревогу, которая сопровождает
-              каждую пару в процессе подготовки — и превращаю её в лёгкость.
+              Я не просто организовываю мероприятия. Я беру на себя <span style={{ color: "hsl(345, 45%, 28%)" }}>тревогу</span>, которая сопровождает
+              каждую пару в процессе подготовки — и превращаю её в <span style={{ color: "hsl(345, 45%, 28%)" }}>лёгкость</span>.
             </p>
           </div>
 

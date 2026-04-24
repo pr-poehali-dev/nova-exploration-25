@@ -36,9 +36,6 @@ export function WsPricing() {
     <section id="pricing" className="py-28 px-6 md:px-16 bg-background">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
-          <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-4">
-            Стоимость
-          </p>
           <h2
             className="text-foreground leading-[1.2]"
             style={{
@@ -53,22 +50,24 @@ export function WsPricing() {
 
         <div className="space-y-3">
           {plans.map((plan, i) => (
-            <div
+            <a
               key={i}
-              className={`group flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-6 border transition-all duration-300 ${
+              href="#form"
+              className={`group flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-6 border transition-all duration-300 cursor-pointer ${
                 plan.highlight
                   ? "text-white border-transparent"
-                  : "bg-background border-border hover:border-foreground/20"
+                  : "bg-background border-border hover:border-[hsl(345,45%,28%)] hover:shadow-sm"
               }`}
               style={plan.highlight ? { background: "hsl(345, 45%, 28%)" } : undefined}
             >
               <div className="flex-1">
                 <h3
-                  className={`mb-1 ${plan.highlight ? "text-white" : "text-foreground"}`}
+                  className={`mb-1 ${plan.highlight ? "text-white" : "text-foreground group-hover:text-[hsl(345,45%,28%)]"}`}
                   style={{
                     fontFamily: "Cormorant Garamond, serif",
                     fontSize: "1.25rem",
                     fontWeight: plan.highlight ? 500 : 400,
+                    transition: "color 0.2s",
                   }}
                 >
                   {plan.name}
@@ -77,7 +76,7 @@ export function WsPricing() {
                   {plan.description}
                 </p>
               </div>
-              <div className="shrink-0 text-right">
+              <div className="shrink-0 text-right flex items-center gap-4">
                 <p
                   className={`tracking-wide ${plan.highlight ? "text-white" : "text-foreground"}`}
                   style={{
@@ -88,8 +87,11 @@ export function WsPricing() {
                 >
                   {plan.price}
                 </p>
+                {!plan.highlight && (
+                  <span className="text-muted-foreground/40 group-hover:text-[hsl(345,45%,28%)] transition-colors text-sm">→</span>
+                )}
               </div>
-            </div>
+            </a>
           ))}
         </div>
 

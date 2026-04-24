@@ -32,11 +32,11 @@ export function WsHero() {
         >
           wabi sabi studio
         </div>
-        <nav className="hidden md:flex gap-8 text-white/70 text-xs tracking-widest uppercase">
-          <a href="#about" className="hover:text-white transition-colors">Обо мне</a>
-          <a href="#services" className="hover:text-white transition-colors">Услуги</a>
-          <a href="#pricing" className="hover:text-white transition-colors">Цены</a>
-          <a href="#form" className="hover:text-white transition-colors">Консультация</a>
+        <nav className="hidden md:flex gap-8 text-xs tracking-widest uppercase font-semibold" style={{ color: "hsl(345, 65%, 72%)" }}>
+          <a href="#about" className="transition-colors hover:opacity-80">Обо мне</a>
+          <a href="#services" className="transition-colors hover:opacity-80">Услуги</a>
+          <a href="#pricing" className="transition-colors hover:opacity-80">Цены</a>
+          <a href="#form" className="transition-colors hover:opacity-80">Консультация</a>
         </nav>
       </header>
 
@@ -45,7 +45,7 @@ export function WsHero() {
         <div
           className={`transition-all duration-1000 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
         >
-          <p className="text-xs tracking-[0.3em] uppercase mb-6 font-light" style={{ color: "hsl(345, 65%, 75%)" }}>
+          <p className="text-xs tracking-[0.3em] uppercase mb-6 font-bold" style={{ color: "hsl(345, 65%, 72%)" }}>
             Набережные Челны · Казань
           </p>
           <h1
@@ -56,11 +56,11 @@ export function WsHero() {
               fontWeight: 300,
             }}
           >
-            Ваше спокойствие —<br />
-            <em>моя главная задача.</em>
+            Ваше <em style={{ color: "hsl(345, 65%, 72%)" }}>спокойствие</em> —<br />
+            моя главная задача.
           </h1>
           <p className="text-white/70 text-base md:text-lg font-light tracking-wide max-w-md mb-10">
-            Организатор и координатор свадебных торжеств
+            Организатор и координатор <span style={{ color: "hsl(345, 65%, 72%)" }}>свадебных торжеств</span>
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a

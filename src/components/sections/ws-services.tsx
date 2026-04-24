@@ -1,4 +1,4 @@
-import { useState } from "react"
+import React, { useState } from "react"
 import Icon from "@/components/ui/icon"
 
 const organizer = [
@@ -41,8 +41,8 @@ export function WsServices() {
               fontWeight: 400,
             }}
           >
-            Мы думаем за вас.<br />
-            <em>Мы контролируем за вас.</em>
+            <span style={{ color: "hsl(345, 45%, 28%)" }}>Думаем</span> за вас.<br />
+            <em><span style={{ color: "hsl(345, 45%, 28%)" }}>Контролируем</span> за вас.</em>
           </h2>
         </div>
 
@@ -56,13 +56,17 @@ export function WsServices() {
             <button
               key={tab.key}
               onClick={() => setActive(tab.key as typeof active)}
-              className={`px-6 py-4 text-left border transition-all duration-300 ${
+              className="px-6 py-4 text-left border transition-all duration-300"
+              style={
                 active === tab.key
-                  ? "bg-foreground text-background border-foreground"
-                  : "bg-background text-foreground border-border hover:border-foreground/30"
-              }`}
+                  ? { background: "hsl(345, 45%, 28%)", borderColor: "hsl(345, 45%, 28%)", color: "white" }
+                  : { background: "hsl(var(--background))", borderColor: "hsl(var(--border))", color: "hsl(var(--foreground))" }
+              }
             >
-              <p className={`text-xs tracking-[0.15em] uppercase mb-0.5 ${active === tab.key ? "text-background/60" : "text-muted-foreground"}`}>
+              <p
+                className="text-xs tracking-[0.15em] uppercase mb-0.5"
+                style={{ color: active === tab.key ? "rgba(255,255,255,0.65)" : undefined }}
+              >
                 {tab.sub}
               </p>
               <p
@@ -82,68 +86,83 @@ export function WsServices() {
         {/* Content cards */}
         <div className="grid md:grid-cols-2 gap-8 items-start">
           {/* Service list */}
-          <div className="wabi-card p-8">
+          <div className="wabi-card p-8 flex flex-col">
             {active === "organizer" && (
               <>
                 <h3
-                  className="text-foreground mb-2"
-                  style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "1.5rem", fontWeight: 400 }}
+                  className="mb-2"
+                  style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "1.5rem", fontWeight: 400, color: "hsl(345, 45%, 28%)" }}
                 >
                   Свадебный организатор
                 </h3>
                 <p className="text-muted-foreground text-sm mb-8">
-                  Для тех, кто хочет наслаждаться каждым моментом подготовки — не теряясь в деталях
+                  Для тех, кто хочет <span className="font-medium text-foreground/80">наслаждаться</span> каждым моментом подготовки — не теряясь в деталях
                 </p>
-                <ul className="space-y-5">
+                <ul className="space-y-5 flex-1">
                   {organizer.map((item, i) => (
                     <li key={i} className="flex gap-4 items-start">
-                      <Icon name={item.icon} size={16} className="text-muted-foreground mt-0.5 shrink-0" />
+                      <Icon name={item.icon} size={16} className="mt-0.5 shrink-0" style={{ color: "hsl(345, 45%, 28%)" } as React.CSSProperties} />
                       <span className="text-foreground/80 font-light text-sm leading-relaxed">{item.text}</span>
                     </li>
                   ))}
                 </ul>
+                <div className="mt-8 pt-6 border-t border-border">
+                  <a href="#form" className="text-xs tracking-[0.2em] uppercase font-semibold hover:opacity-70 transition-opacity" style={{ color: "hsl(345, 45%, 28%)" }}>
+                    Выбрать этот пакет →
+                  </a>
+                </div>
               </>
             )}
             {active === "partial" && (
               <>
                 <h3
-                  className="text-foreground mb-2"
-                  style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "1.5rem", fontWeight: 400 }}
+                  className="mb-2"
+                  style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "1.5rem", fontWeight: 400, color: "hsl(345, 45%, 28%)" }}
                 >
                   Частичное планирование
                 </h3>
                 <p className="text-muted-foreground text-sm mb-8">
-                  Когда начали сами, но застряли на каком-то этапе и задаётесь вопросом «что делать дальше?»
+                  Когда начали сами, но <span className="font-medium text-foreground/80">застряли</span> на каком-то этапе и задаётесь вопросом «что делать дальше?»
                 </p>
-                <ul className="space-y-5">
+                <ul className="space-y-5 flex-1">
                   {partial.map((item, i) => (
                     <li key={i} className="flex gap-4 items-start">
-                      <Icon name={item.icon} size={16} className="text-muted-foreground mt-0.5 shrink-0" />
+                      <Icon name={item.icon} size={16} className="mt-0.5 shrink-0" style={{ color: "hsl(345, 45%, 28%)" } as React.CSSProperties} />
                       <span className="text-foreground/80 font-light text-sm leading-relaxed">{item.text}</span>
                     </li>
                   ))}
                 </ul>
+                <div className="mt-8 pt-6 border-t border-border">
+                  <a href="#form" className="text-xs tracking-[0.2em] uppercase font-semibold hover:opacity-70 transition-opacity" style={{ color: "hsl(345, 45%, 28%)" }}>
+                    Выбрать этот пакет →
+                  </a>
+                </div>
               </>
             )}
             {active === "coordinator" && (
               <>
                 <h3
-                  className="text-foreground mb-2"
-                  style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "1.5rem", fontWeight: 400 }}
+                  className="mb-2"
+                  style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "1.5rem", fontWeight: 400, color: "hsl(345, 45%, 28%)" }}
                 >
                   Координатор на день торжества
                 </h3>
                 <p className="text-muted-foreground text-sm mb-8">
-                  Вы всё подготовили сами — но в день свадьбы хотите быть гостем, а не менеджером
+                  Вы всё подготовили сами — но в день свадьбы хотите быть <span className="font-medium text-foreground/80">гостем, а не менеджером</span>
                 </p>
-                <ul className="space-y-5">
+                <ul className="space-y-5 flex-1">
                   {coordinator.map((item, i) => (
                     <li key={i} className="flex gap-4 items-start">
-                      <Icon name={item.icon} size={16} className="text-muted-foreground mt-0.5 shrink-0" />
+                      <Icon name={item.icon} size={16} className="mt-0.5 shrink-0" style={{ color: "hsl(345, 45%, 28%)" } as React.CSSProperties} />
                       <span className="text-foreground/80 font-light text-sm leading-relaxed">{item.text}</span>
                     </li>
                   ))}
                 </ul>
+                <div className="mt-8 pt-6 border-t border-border">
+                  <a href="#form" className="text-xs tracking-[0.2em] uppercase font-semibold hover:opacity-70 transition-opacity" style={{ color: "hsl(345, 45%, 28%)" }}>
+                    Выбрать этот пакет →
+                  </a>
+                </div>
               </>
             )}
           </div>

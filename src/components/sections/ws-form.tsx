@@ -80,7 +80,7 @@ export function WsForm() {
             <em>идеальный день</em>
           </h2>
           <p className="text-muted-foreground font-light text-sm">
-            Расскажите немного о себе — и мы найдём время для знакомства
+            Расскажите немного о себе
           </p>
         </div>
 

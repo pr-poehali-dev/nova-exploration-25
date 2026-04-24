@@ -59,7 +59,7 @@ export function WsAbout() {
               Обо мне
             </p>
             <h2
-              className="mb-8 leading-[1.2]"
+              className="mb-2 leading-[1.2]"
               style={{
                 fontFamily: "Cormorant Garamond, serif",
                 fontSize: "clamp(2rem, 4vw, 3rem)",
@@ -70,6 +70,12 @@ export function WsAbout() {
               Человек,<br />
               <em style={{ color: "hsl(345, 45%, 28%)" }}>который думает за вас</em>
             </h2>
+            <p
+              className="mb-8 font-light"
+              style={{ color: "hsl(345, 45%, 28%)", fontSize: "1.05rem", fontFamily: "Cormorant Garamond, serif", fontStyle: "italic" }}
+            >
+              Катерина Кузнецова
+            </p>
             <div className="space-y-5 text-foreground/70 font-light leading-relaxed text-[15px]">
               <p>
                 Я — организатор и координатор свадебных торжеств. Я знаю, что за безупречным
@@ -77,12 +83,12 @@ export function WsAbout() {
                 последнюю минуту.
               </p>
               <p>
-                Моя задача — подарить вам лёгкость. Чтобы в день свадьбы вы думали только
-                о друг друге, а не о том, приехал ли флорист и правильно ли расставлены
-                столы.
+                Моя задача — подарить вам <span style={{ color: "hsl(345, 45%, 28%)" }}>праздник и спокойствие</span> в важный день.
+                Чтобы вы думали только о друг друге, а не о том, приехал ли флорист и
+                правильно ли расставлены столы.
               </p>
               <p>
-                Каждая свадьба для меня — это история. Вашa история. И я хочу, чтобы она
+                Каждая свадьба для меня — это <span style={{ color: "hsl(345, 45%, 28%)" }}>история</span>. Ваша история. И я хочу, чтобы она
                 была рассказана именно так, как вы об этом мечтали.
               </p>
             </div>
