@@ -1,3 +1,111 @@
+import { useState, useEffect } from "react"
+
+const quotes = [
+  {
+    text: "«Любовь — это когда двое едины. Когда мужчина и женщина превращаются в ангела. Это — небо!»",
+    author: "Виктор Гюго, Собор Парижской Богоматери",
+  },
+  {
+    text: "«Тот, кто любит, должен разделять участь того, кого он любит.»",
+    author: "Михаил Булгаков, Мастер и Маргарита",
+  },
+  {
+    text: "«Любовь не знает логики, она выше разума. Это существованье возвышенное, венец бытия, и редкому человеку она даётся.»",
+    author: "Джек Лондон, Мартин Иден",
+  },
+  {
+    text: "«Если человек умер, его нельзя перестать любить, чёрт возьми. Особенно если он был лучше всех живых.»",
+    author: "Джером Дэвид Сэлинджер, Над пропастью во ржи",
+  },
+  {
+    text: "«Любящее сердце стоит больше, чем вся мудрость на свете.»",
+    author: "Чарльз Диккенс, Дэвид Копперфилд",
+  },
+  {
+    text: "«Я лучше разделю одну смертную жизнь с тобой, чем проживу все эпохи мира в одиночестве.»",
+    author: "Арвен, Властелин колец",
+  },
+  {
+    text: "«Вы пленили мою бедную душу, и я люблю вас… И с этой минуты не хочу с вами расставаться.»",
+    author: "Джейн Остин, Гордость и предубеждение",
+  },
+  {
+    text: "«Я верю в одну вещь. Всегда нужно признаваться в любви тому, кого любишь.»",
+    author: "Господин Никто",
+  },
+  {
+    text: "«Полюбить человека, отвечающего тебе взаимностью, — это само по себе чудо.»",
+    author: "P. S. Я люблю тебя",
+  },
+  {
+    text: "«Я так счастлива, что не верю ни в горе, ни в смерть. Жить не означает ждать, когда буря стихнет.»",
+    author: "Королёк — птичка певчая",
+  },
+]
+
+function QuoteCarousel() {
+  const [index, setIndex] = useState(0)
+  const [fade, setFade] = useState(true)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFade(false)
+      setTimeout(() => {
+        setIndex((i) => (i + 1) % quotes.length)
+        setFade(true)
+      }, 500)
+    }, 5000)
+    return () => clearInterval(interval)
+  }, [])
+
+  const q = quotes[index]
+
+  return (
+    <div className="text-center mt-20">
+      <div className="ornament-divider max-w-lg mx-auto mb-8">
+        <span className="text-sm" style={{ color: "hsl(345, 45%, 28%)" }}>✦</span>
+      </div>
+      <div
+        style={{
+          transition: "opacity 0.5s ease",
+          opacity: fade ? 1 : 0,
+          minHeight: "8rem",
+        }}
+      >
+        <blockquote
+          className="max-w-2xl mx-auto leading-relaxed px-4"
+          style={{
+            fontFamily: "Cormorant Garamond, serif",
+            fontSize: "clamp(1.1rem, 2.2vw, 1.5rem)",
+            fontStyle: "italic",
+            fontWeight: 300,
+            color: "hsl(345, 45%, 28%)",
+          }}
+        >
+          {q.text}
+        </blockquote>
+        <p className="text-muted-foreground text-xs tracking-[0.2em] uppercase mt-4">
+          — {q.author}
+        </p>
+      </div>
+      {/* Dots */}
+      <div className="flex justify-center gap-2 mt-6">
+        {quotes.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => { setFade(false); setTimeout(() => { setIndex(i); setFade(true) }, 300) }}
+            className="w-1.5 h-1.5 rounded-full transition-all"
+            style={{
+              background: i === index ? "hsl(345, 45%, 28%)" : "hsl(345, 45%, 28%, 0.25)",
+              transform: i === index ? "scale(1.4)" : "scale(1)",
+            }}
+          />
+        ))}
+      </div>
+    </div>
+  )
+}
+
 const moodImages = [
   {
     src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/13efd93d-1ca2-4787-a753-a6c3014c219f.jpg",
@@ -82,25 +190,8 @@ export function WsVision() {
           ))}
         </div>
 
-        {/* Quote */}
-        <div className="text-center mt-20">
-          <div className="ornament-divider max-w-lg mx-auto mb-8">
-            <span className="text-sm" style={{ color: "hsl(345, 45%, 28%)" }}>✦</span>
-          </div>
-          <blockquote
-            className="max-w-xl mx-auto leading-relaxed"
-            style={{
-              fontFamily: "Cormorant Garamond, serif",
-              fontSize: "clamp(1.2rem, 2.5vw, 1.6rem)",
-              fontStyle: "italic",
-              fontWeight: 300,
-              color: "hsl(345, 45%, 28%)",
-            }}
-          >
-            «Ты слишком добра, чтобы изводить меня. Позволь мне объясниться. Моя любовь к тебе всё росла — и я не мог не признаться, хотя знал, что это против воли рассудка.»
-          </blockquote>
-          <p className="text-muted-foreground text-xs tracking-[0.2em] uppercase mt-4">— Джейн Остин, Гордость и предубеждение</p>
-        </div>
+        {/* Rotating Quotes */}
+        <QuoteCarousel />
       </div>
     </section>
   )

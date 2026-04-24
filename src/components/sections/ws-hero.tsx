@@ -57,7 +57,7 @@ export function WsHero() {
             }}
           >
             Ваше спокойствие —<br />
-            моя главная задача.
+            <em style={{ color: "hsl(345, 45%, 28%)" }}>моя главная задача.</em>
           </h1>
           <p className="text-white text-base md:text-lg font-light tracking-wide max-w-md mb-10">
             Организатор и координатор свадебных торжеств
