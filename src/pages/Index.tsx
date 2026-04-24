@@ -4,6 +4,7 @@ import { WsServices } from "@/components/sections/ws-services"
 import { WsPricing } from "@/components/sections/ws-pricing"
 import { WsWhy } from "@/components/sections/ws-why"
 import { WsVision } from "@/components/sections/ws-vision"
+import { WsStories } from "@/components/sections/ws-stories"
 import { WsFaq } from "@/components/sections/ws-faq"
 import { WsForm } from "@/components/sections/ws-form"
 import { WsFooter } from "@/components/sections/ws-footer"
@@ -17,6 +18,7 @@ const Index = () => {
       <WsPricing />
       <WsWhy />
       <WsVision />
+      <WsStories />
       <WsFaq />
       <WsForm />
       <WsFooter />
