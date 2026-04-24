@@ -108,28 +108,34 @@ function QuoteCarousel() {
 
 const moodImages = [
   {
-    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/13efd93d-1ca2-4787-a753-a6c3014c219f.jpg",
-    caption: "Детали, которые остаются в памяти",
+    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/fd2db6e6-0e2b-4720-a733-ba2b9fba3a31.jpg",
+    caption: "Двое в своём мире",
     rotate: "-2deg",
     size: "tall",
   },
   {
-    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/33cd5a2c-0ed0-490a-92eb-b5a0305aad3f.jpg",
-    caption: "История двоих",
+    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/bae3cb59-172f-4fa1-b284-226e1a89301f.jpg",
+    caption: "Момент, который останется навсегда",
     rotate: "1.5deg",
     size: "normal",
   },
   {
-    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/960f0e4e-d492-40af-9a87-fbefc7835564.jpg",
-    caption: "Атмосфера, которую я создаю",
-    rotate: "-1deg",
-    size: "wide",
+    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/db97683e-bb6c-4c4f-869b-7159299070f6.jpg",
+    caption: "Прикосновение",
+    rotate: "-1.5deg",
+    size: "normal",
   },
   {
-    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/9f92fc2f-c1f3-42a9-a35d-f58a1d5ef311.jpg",
-    caption: "Каждый символ — ваш",
+    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/099c4590-cfe7-4ecc-ac99-a7feacd6ee07.jpg",
+    caption: "Кольца — символ вечного",
     rotate: "2deg",
-    size: "normal",
+    size: "tall",
+  },
+  {
+    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/94a7ca97-743a-4da3-9ff9-44c1772b6a7a.jpg",
+    caption: "История, рассказанная с любовью",
+    rotate: "-1deg",
+    size: "wide",
   },
 ]
 
@@ -149,13 +155,13 @@ export function WsVision() {
               fontWeight: 400,
             }}
           >
-            Эстетика,<br />
-            <em>которую я несу в каждую свадьбу</em>
+            Моменты,<br />
+            <em>которые я помогаю сохранить навсегда</em>
           </h2>
         </div>
 
         {/* Collage grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-5">
           {moodImages.map((img, i) => (
             <div
               key={i}
@@ -178,7 +184,7 @@ export function WsVision() {
                   className="w-full object-cover"
                   style={{
                     aspectRatio: img.size === "tall" ? "2/3" : img.size === "wide" ? "4/3" : "3/4",
-                    filter: "sepia(10%) contrast(95%) brightness(97%)",
+                    filter: "contrast(97%) brightness(98%)",
                   }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
