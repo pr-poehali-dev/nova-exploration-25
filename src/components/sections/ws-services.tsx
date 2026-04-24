@@ -123,7 +123,7 @@ export function WsServices() {
             }}
           >
             Ваш праздник — <span style={{ color: "hsl(345, 45%, 28%)" }}>наша</span> забота.<br />
-            <em>От первой идеи до <span style={{ color: "hsl(345, 45%, 28%)" }}>последнего танца.</span></em>
+            <em>От первой идеи до <span style={{ color: "hsl(345, 45%, 28%)" }}>последнего танца молодых.</span></em>
           </h2>
         </div>
 

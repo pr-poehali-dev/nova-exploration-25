@@ -45,11 +45,11 @@ export function WsHero() {
         <div
           className={`transition-all duration-1000 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
         >
-          <div className="mb-6">
-            <p className="text-xs tracking-[0.3em] uppercase font-bold leading-relaxed" style={{ color: "hsl(345, 45%, 28%)" }}>
+          <div className="mb-6 flex flex-col gap-1">
+            <p className="text-xs tracking-[0.3em] uppercase font-bold text-white">
               Набережные Челны
             </p>
-            <p className="text-xs tracking-[0.3em] uppercase font-bold" style={{ color: "hsl(345, 45%, 28%)" }}>
+            <p className="text-xs tracking-[0.3em] uppercase font-bold text-white">
               Казань
             </p>
           </div>
