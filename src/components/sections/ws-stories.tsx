@@ -28,7 +28,7 @@ export function WsStories() {
             className="overflow-hidden flex flex-col"
             style={{ aspectRatio: "9/16", background: cream, border: `1px solid ${sand}` }}
           >
-            <div className="shrink-0" style={{ height: "33%" }}>
+            <div className="shrink-0" style={{ height: "66%" }}>
               <img
                 src="https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/ca05874b-c9cf-439d-a9b3-a52d97e07d8c.jpg"
                 alt="Катерина"
@@ -52,7 +52,7 @@ export function WsStories() {
                 >
                   Организатор и координатор свадебных торжеств
                 </p>
-                <div className="border-t pt-3 space-y-1.5" style={{ borderColor: sand }}>
+                <div className="border-t pt-3 space-y-1.5 text-center" style={{ borderColor: sand }}>
                   <p className="text-[8px] tracking-widest uppercase" style={{ color: muteText }}>Набережные Челны · Казань</p>
                   <p className="text-[8px] tracking-widest uppercase font-semibold" style={{ color: cherry }}>Консультация — бесплатно</p>
                 </div>
@@ -70,6 +70,7 @@ export function WsStories() {
                 src="https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/7f145795-54fe-4e93-b889-7bf1211b7b4b.jpg"
                 alt="Услуги"
                 className="w-full h-full object-cover"
+                style={{ objectPosition: "center 20%" }}
               />
               <div className="absolute inset-0" style={{ background: "rgba(57,18,18,0.15)" }} />
             </div>
@@ -106,8 +107,8 @@ export function WsStories() {
               <img
                 src="https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/43bc7a47-a274-4b16-8f57-51c1c32969a1.jpg"
                 alt="Подход"
-                className="w-full h-full object-cover object-top"
-                style={{ filter: "grayscale(15%)" }}
+                className="w-full h-full object-cover"
+                style={{ filter: "grayscale(15%)", objectPosition: "center 25%" }}
               />
             </div>
             <div className="flex-1 flex flex-col justify-between p-4" style={{ background: cream }}>
@@ -132,7 +133,7 @@ export function WsStories() {
                     </div>
                   </div>
                 ))}
-                <p className="text-[8px] tracking-widest uppercase" style={{ color: muteText }}>Набережные Челны · Казань</p>
+                <p className="text-[8px] tracking-widest uppercase text-center" style={{ color: muteText }}>Набережные Челны · Казань</p>
               </div>
             </div>
           </div>
