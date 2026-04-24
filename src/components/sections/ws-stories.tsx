@@ -28,7 +28,7 @@ export function WsStories() {
             className="overflow-hidden flex flex-col"
             style={{ aspectRatio: "9/16", background: cream, border: `1px solid ${sand}` }}
           >
-            <div className="shrink-0" style={{ height: "66%" }}>
+            <div className="shrink-0" style={{ height: "33%" }}>
               <img
                 src="https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/ca05874b-c9cf-439d-a9b3-a52d97e07d8c.jpg"
                 alt="Катерина"
