@@ -62,15 +62,14 @@ function ServicePhotoSlider() {
   const photo = servicePhotos[index]
 
   return (
-    <div className="relative">
-      <div style={{ transition: "opacity 0.4s ease", opacity: fade ? 1 : 0 }}>
+    <div className="relative flex-1 h-full min-h-[320px]">
+      <div className="absolute inset-0" style={{ transition: "opacity 0.4s ease", opacity: fade ? 1 : 0 }}>
         <img
           src={photo.src}
           alt={photo.caption}
-          className="w-full object-cover aspect-[4/3] md:aspect-[3/4]"
+          className="w-full h-full object-cover aspect-[4/3] md:aspect-auto"
           style={{
             filter: "contrast(96%) brightness(98%)",
-            objectFit: "cover",
             objectPosition: "center",
           }}
         />
@@ -189,9 +188,9 @@ export function WsServices() {
         </div>
 
         {/* Content cards */}
-        <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-start">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8 md:items-stretch">
           {/* Visual side on mobile goes first */}
-          <div className="order-first md:order-last">
+          <div className="order-first md:order-last md:flex md:flex-col md:h-full">
             <ServicePhotoSlider />
           </div>
           {/* Service list */}
