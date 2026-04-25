@@ -4,7 +4,7 @@ const FORM_URL = "https://functions.poehali.dev/c3ef5ebb-0e12-4bb4-966d-3bd1ef8a
 
 const contactOptions = [
   "Телефонный звонок",
-  "WhatsApp / Telegram",
+  "Telegram / VK / MAX",
   "Электронная почта",
 ]
 
