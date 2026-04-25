@@ -6,7 +6,7 @@ export function WsFooter() {
           <div>
             <p
               className="tracking-[0.2em] uppercase mb-4"
-              style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "1.1rem", fontWeight: 700, color: "#fff" }}
+              style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "1.1rem", fontWeight: 700, color: "hsl(345, 45%, 28%)" }}
             >
               Wabi Sabi Studio
             </p>
@@ -17,7 +17,7 @@ export function WsFooter() {
           </div>
 
           <div>
-            <p className="text-xs tracking-[0.2em] uppercase mb-4 font-bold" style={{ color: "#fff" }}>
+            <p className="text-xs tracking-[0.2em] uppercase mb-4 font-bold" style={{ color: "hsl(345, 45%, 28%)" }}>
               Услуги
             </p>
             <ul className="space-y-2">
@@ -37,7 +37,7 @@ export function WsFooter() {
           </div>
 
           <div>
-            <p className="text-xs tracking-[0.2em] uppercase mb-4 font-bold" style={{ color: "#fff" }}>
+            <p className="text-xs tracking-[0.2em] uppercase mb-4 font-bold" style={{ color: "hsl(345, 45%, 28%)" }}>
               Связаться
             </p>
             <ul className="space-y-3 text-foreground/65 font-light text-sm">
