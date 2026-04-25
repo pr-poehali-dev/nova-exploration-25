@@ -5,8 +5,8 @@ export function WsFooter() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 mb-10 md:mb-12">
           <div>
             <p
-              className="text-foreground tracking-[0.2em] uppercase mb-4"
-              style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "1.1rem", fontWeight: 300 }}
+              className="tracking-[0.2em] uppercase mb-4"
+              style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "1.1rem", fontWeight: 700, color: "#fff" }}
             >
               Wabi Sabi Studio
             </p>
@@ -17,7 +17,7 @@ export function WsFooter() {
           </div>
 
           <div>
-            <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mb-4">
+            <p className="text-xs tracking-[0.2em] uppercase mb-4 font-bold" style={{ color: "#fff" }}>
               Услуги
             </p>
             <ul className="space-y-2">
@@ -37,7 +37,7 @@ export function WsFooter() {
           </div>
 
           <div>
-            <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mb-4">
+            <p className="text-xs tracking-[0.2em] uppercase mb-4 font-bold" style={{ color: "#fff" }}>
               Связаться
             </p>
             <ul className="space-y-3 text-foreground/65 font-light text-sm">
