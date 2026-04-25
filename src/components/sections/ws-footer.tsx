@@ -57,6 +57,11 @@ export function WsFooter() {
                 </a>
               </li>
               <li>
+                <a href="https://vk.com/kateandkillers" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
+                  ВКонтакте: vk.com/kateandkillers
+                </a>
+              </li>
+              <li>
                 <a href="#form" className="hover:text-foreground transition-colors" style={{ color: "hsl(345, 45%, 28%)" }}>
                   Оставить заявку →
                 </a>

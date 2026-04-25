@@ -209,21 +209,6 @@ export function WsForm() {
             </div>
           </div>
 
-          {/* Expectations */}
-          <div>
-            <label className="block text-xs tracking-[0.15em] uppercase text-muted-foreground mb-2">
-              Ваши ожидания и пожелания
-            </label>
-            <textarea
-              name="expectations"
-              value={form.expectations}
-              onChange={handleChange}
-              placeholder="Расскажите, каким вы видите свой день..."
-              rows={4}
-              className="w-full bg-transparent border border-border px-4 py-3 text-sm font-light text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-foreground/40 transition-colors resize-none"
-            />
-          </div>
-
           {/* Has style */}
           <div>
             <label className="block text-xs tracking-[0.15em] uppercase text-muted-foreground mb-3">
@@ -256,6 +241,21 @@ export function WsForm() {
                 className="w-full bg-transparent border border-border px-4 py-3 text-sm font-light text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-foreground/40 transition-colors"
               />
             )}
+          </div>
+
+          {/* Expectations */}
+          <div>
+            <label className="block text-xs tracking-[0.15em] uppercase text-muted-foreground mb-2">
+              Ваши ожидания и пожелания
+            </label>
+            <textarea
+              name="expectations"
+              value={form.expectations}
+              onChange={handleChange}
+              placeholder="Расскажите, каким вы видите свой день..."
+              rows={4}
+              className="w-full bg-transparent border border-border px-4 py-3 text-sm font-light text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-foreground/40 transition-colors resize-none"
+            />
           </div>
 
           {/* Comments */}
