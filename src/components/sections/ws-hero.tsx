@@ -1,7 +1,9 @@
 import { useEffect, useRef, useState } from "react"
+import Icon from "@/components/ui/icon"
 
 export function WsHero() {
   const [visible, setVisible] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -25,10 +27,10 @@ export function WsHero() {
       </div>
 
       {/* Nav */}
-      <header className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-8 md:px-16 pt-8">
+      <header className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-5 md:px-16 pt-6 md:pt-8">
         <div
           className="text-white tracking-[0.25em] uppercase"
-          style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 700, fontSize: "1.1rem" }}
+          style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 700, fontSize: "1rem" }}
         >
           wabi sabi studio
         </div>
@@ -38,10 +40,50 @@ export function WsHero() {
           <a href="#pricing" className="transition-opacity hover:opacity-70">Цены</a>
           <a href="#form" className="transition-opacity hover:opacity-70">Консультация</a>
         </nav>
+        <button
+          className="md:hidden text-white p-1"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Меню"
+        >
+          <Icon name={menuOpen ? "X" : "Menu"} size={22} />
+        </button>
       </header>
 
+      {/* Mobile menu */}
+      {menuOpen && (
+        <div className="absolute top-0 left-0 right-0 z-30 md:hidden flex flex-col" style={{ background: "rgba(30,20,15,0.97)" }}>
+          <div className="flex items-center justify-between px-5 pt-6 pb-4">
+            <div
+              className="text-white tracking-[0.25em] uppercase"
+              style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 700, fontSize: "1rem" }}
+            >
+              wabi sabi studio
+            </div>
+            <button className="text-white p-1" onClick={() => setMenuOpen(false)}>
+              <Icon name="X" size={22} />
+            </button>
+          </div>
+          <nav className="flex flex-col px-5 pb-8 gap-6">
+            {["#about|Обо мне", "#services|Услуги", "#pricing|Цены", "#form|Консультация"].map((item) => {
+              const [href, label] = item.split("|")
+              return (
+                <a
+                  key={href}
+                  href={href}
+                  onClick={() => setMenuOpen(false)}
+                  className="text-white text-sm tracking-[0.2em] uppercase border-b border-white/10 pb-4"
+                  style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "1.1rem" }}
+                >
+                  {label}
+                </a>
+              )
+            })}
+          </nav>
+        </div>
+      )}
+
       {/* Hero content */}
-      <div className="relative z-10 px-8 md:px-16 pb-20 md:pb-28">
+      <div className="relative z-10 px-5 md:px-16 pb-16 md:pb-28">
         <div
           className={`transition-all duration-1000 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
         >

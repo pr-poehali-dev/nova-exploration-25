@@ -27,9 +27,9 @@ const reasons = [
 
 export function WsWhy() {
   return (
-    <section id="why" className="py-28 px-6 md:px-16" style={{ background: "hsl(var(--surface))" }}>
+    <section id="why" className="py-16 md:py-28 px-5 md:px-16" style={{ background: "hsl(var(--surface))" }}>
       <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-16 items-start">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-start">
           <div>
             <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-4">
               Почему мне доверяют

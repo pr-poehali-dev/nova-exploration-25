@@ -11,10 +11,6 @@ const servicePhotos = [
     caption: "«Каждая деталь — на своём месте.»",
   },
   {
-    src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/099c4590-cfe7-4ecc-ac99-a7feacd6ee07.jpg",
-    caption: "«Кольца — символ вечного.»",
-  },
-  {
     src: "https://cdn.poehali.dev/projects/2a0a2c2e-9d24-43e5-b790-5299a6e10c49/bucket/e6fd86bc-132b-40a3-b4b9-1e20e517735f.jpg",
     caption: "«Ваш день — ваша история.»",
   },
@@ -73,11 +69,10 @@ function ServicePhotoSlider() {
           alt={photo.caption}
           className="w-full object-cover"
           style={{
-            aspectRatio: "3/4",
+            aspectRatio: "4/3",
             filter: "contrast(96%) brightness(98%)",
             objectFit: "cover",
             objectPosition: "center",
-            transform: photo.src.includes("099c4590") ? "scale(1.15)" : undefined,
           }}
         />
         <div className="absolute bottom-6 left-6 right-6 bg-background/90 p-5 border border-border">
@@ -138,9 +133,9 @@ export function WsServices() {
   const [active, setActive] = useState<"organizer" | "partial" | "coordinator">("organizer")
 
   return (
-    <section id="services" className="py-28 px-6 md:px-16" style={{ background: "hsl(var(--surface))" }}>
+    <section id="services" className="py-16 md:py-28 px-5 md:px-16" style={{ background: "hsl(var(--surface))" }}>
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-4">
             Услуги
           </p>
@@ -195,9 +190,13 @@ export function WsServices() {
         </div>
 
         {/* Content cards */}
-        <div className="grid md:grid-cols-2 gap-8 items-start">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-start">
+          {/* Visual side on mobile goes first */}
+          <div className="order-first md:order-last">
+            <ServicePhotoSlider />
+          </div>
           {/* Service list */}
-          <div className="wabi-card p-8 flex flex-col">
+          <div className="wabi-card p-6 md:p-8 flex flex-col order-last md:order-first">
             {active === "organizer" && (
               <>
                 <h3
@@ -277,9 +276,6 @@ export function WsServices() {
               </>
             )}
           </div>
-
-          {/* Visual side — rotating photos */}
-          <ServicePhotoSlider />
         </div>
       </div>
     </section>

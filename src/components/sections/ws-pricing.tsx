@@ -37,9 +37,9 @@ export function WsPricing() {
   const [active, setActive] = useState<number | null>(null)
 
   return (
-    <section id="pricing" className="py-28 px-6 md:px-16 bg-background">
+    <section id="pricing" className="py-16 md:py-28 px-5 md:px-16 bg-background">
       <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-4">
             Стоимость
           </p>

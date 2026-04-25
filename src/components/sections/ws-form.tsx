@@ -51,7 +51,7 @@ export function WsForm() {
 
   if (submitted) {
     return (
-      <section id="form" className="py-28 px-6 md:px-16 bg-background">
+      <section id="form" className="py-16 md:py-28 px-5 md:px-16 bg-background">
         <div className="max-w-xl mx-auto text-center">
           <p
             className="text-foreground mb-4"
@@ -73,9 +73,9 @@ export function WsForm() {
   }
 
   return (
-    <section id="form" className="py-28 px-6 md:px-16 bg-background">
+    <section id="form" className="py-16 md:py-28 px-5 md:px-16 bg-background">
       <div className="max-w-2xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-4">
             Начало пути
           </p>

@@ -1,11 +1,11 @@
 export function WsAbout() {
   return (
-    <section id="about" className="py-28 px-6 md:px-16 bg-background">
+    <section id="about" className="py-16 md:py-28 px-5 md:px-16 bg-background">
       <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
           {/* Photo collage */}
           <div className="relative">
-            <div className="relative w-full max-w-sm mx-auto md:mx-0">
+            <div className="relative w-full max-w-xs sm:max-w-sm mx-auto md:mx-0">
               {/* Main image with tape */}
               <div className="relative z-10">
                 {/* Tape strip top-left */}
@@ -22,7 +22,7 @@ export function WsAbout() {
               </div>
               {/* Floating quote card */}
               <div
-                className="absolute -bottom-6 -right-6 md:-right-12 bg-[hsl(var(--card))] border border-[hsl(var(--border))] p-5 max-w-[220px] z-20 shadow-sm"
+                className="absolute -bottom-5 right-0 md:-bottom-6 md:-right-12 bg-[hsl(var(--card))] border border-[hsl(var(--border))] p-4 md:p-5 max-w-[180px] md:max-w-[220px] z-20 shadow-sm"
               >
                 <p
                   className="leading-relaxed"
@@ -55,7 +55,7 @@ export function WsAbout() {
           </div>
 
           {/* Text */}
-          <div>
+          <div className="mt-10 md:mt-0">
             <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-4">
               Обо мне
             </p>

@@ -130,9 +130,9 @@ const moodImages = [
 
 export function WsVision() {
   return (
-    <section id="vision" className="py-28 px-6 md:px-16 bg-background overflow-hidden">
+    <section id="vision" className="py-16 md:py-28 px-5 md:px-16 bg-background overflow-hidden">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-4">
             Атмосфера
           </p>
@@ -150,7 +150,7 @@ export function WsVision() {
         </div>
 
         {/* Photo marquee strip */}
-        <div className="overflow-hidden -mx-6 md:-mx-16">
+        <div className="overflow-hidden -mx-5 md:-mx-16">
           <div
             className="flex gap-4"
             style={{
@@ -162,14 +162,14 @@ export function WsVision() {
               <div
                 key={i}
                 className="group relative shrink-0 overflow-hidden"
-                style={{ width: "260px" }}
+                style={{ width: "clamp(160px, 40vw, 260px)" }}
               >
                 <img
                   src={img.src}
                   alt={img.caption}
                   className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   style={{
-                    height: "340px",
+                    height: "clamp(200px, 50vw, 340px)",
                     filter: "contrast(97%) brightness(98%)",
                     transform: (img as { rotate?: boolean; scale?: number }).rotate
                       ? "rotate(90deg) scale(1.4)"

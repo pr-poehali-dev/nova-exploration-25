@@ -1,8 +1,8 @@
 export function WsFooter() {
   return (
-    <footer className="py-16 px-6 md:px-16 border-t border-border bg-background">
+    <footer className="py-12 md:py-16 px-5 md:px-16 border-t border-border bg-background">
       <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 mb-10 md:mb-12">
           <div>
             <p
               className="text-foreground tracking-[0.2em] uppercase mb-4"

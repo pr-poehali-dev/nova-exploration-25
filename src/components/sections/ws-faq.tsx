@@ -29,9 +29,9 @@ export function WsFaq() {
   const [open, setOpen] = useState<number | null>(0)
 
   return (
-    <section id="faq" className="py-28 px-6 md:px-16" style={{ background: "hsl(var(--surface))" }}>
+    <section id="faq" className="py-16 md:py-28 px-5 md:px-16" style={{ background: "hsl(var(--surface))" }}>
       <div className="max-w-3xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-4">
             Вопросы и ответы
           </p>
