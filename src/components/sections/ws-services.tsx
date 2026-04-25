@@ -128,7 +128,7 @@ const coordinator = [
 ]
 
 export function WsServices() {
-  const [active, setActive] = useState<"organizer" | "partial" | "coordinator">("organizer")
+  const [active, setActive] = useState<"organizer" | "partial" | "coordinator">("partial")
 
   return (
     <section id="services" className="py-16 md:py-28 px-5 md:px-16" style={{ background: "hsl(var(--surface))" }}>
@@ -153,9 +153,9 @@ export function WsServices() {
         {/* Tabs */}
         <div className="flex flex-col sm:flex-row gap-3 mb-12 justify-center">
           {[
-            { key: "organizer", label: "Организатор", sub: "Полный цикл" },
             { key: "partial", label: "Частичное планирование", sub: "Помощь на этапе" },
             { key: "coordinator", label: "Координатор", sub: "День торжества" },
+            { key: "organizer", label: "Организатор", sub: "Полный цикл" },
           ].map((tab) => (
             <button
               key={tab.key}
