@@ -116,7 +116,6 @@ const organizer = [
 
 const partial = [
   { icon: "Puzzle", text: "Помощь в организации отдельных элементов (выбор места, специалистов, декор)" },
-  { icon: "HelpCircle", text: "Поддержка на любом этапе — когда застряли и не знаете «что дальше»" },
   { icon: "CheckCircle", text: "Гибкий формат: берём ровно столько, сколько нужно" },
 ]
 
@@ -128,7 +127,7 @@ const coordinator = [
 ]
 
 export function WsServices() {
-  const [active, setActive] = useState<"organizer" | "partial" | "coordinator">("partial")
+  const [active, setActive] = useState<"organizer" | "partial" | "coordinator">("organizer")
 
   return (
     <section id="services" className="py-16 md:py-28 px-5 md:px-16" style={{ background: "hsl(var(--surface))" }}>
@@ -146,7 +145,7 @@ export function WsServices() {
             }}
           >
             Ваш праздник — <span style={{ color: "hsl(345, 45%, 28%)" }}>наша</span> забота.<br />
-            <em>От первой идеи до <span style={{ color: "hsl(345, 45%, 28%)" }}>последнего танца молодых.</span></em>
+            <em>Будем рядом — <span style={{ color: "hsl(345, 45%, 28%)" }}>от первого «да» до последнего вальса.</span></em>
           </h2>
         </div>
 
